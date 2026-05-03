@@ -1,0 +1,19 @@
+{
+  "section": "revision_gate",
+  "required_outputs": [
+    "missing_information_request",
+    "revision_input_status",
+    "blocked_review_modes"
+  ],
+  "rubric_mapping": [],
+  "evidence_rules": [
+    "REVISION-R1-RESOLUTION-EVIDENCE",
+    "REVISION-R4-REVISION-INPUT-GATE",
+    "RUBRIC-R3-SPECIALIZATION-INPUT-GATE"
+  ],
+  "stop_conditions": [
+    "Stop if prior feedback or revised draft is unavailable.",
+    "Do not classify issue resolution without prior issue record and revised evidence.",
+    "Do not estimate score movement without rubric and prior score basis."
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview FinalDeliveryManifest",
+  "type": "object",
+  "required": [
+    "manifest_id",
+    "created_at",
+    "project_canonical_name",
+    "delivery_status",
+    "source_package_root",
+    "final_delivery_folder",
+    "canonical_zip",
+    "artifacts",
+    "validation",
+    "provenance_hygiene",
+    "naming",
+    "limitations",
+    "scope_confirmation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "project_canonical_name": {"const": "ASCReview"},
+    "delivery_status": {"const": "FINAL_DELIVERY_READY"},
+    "source_package_root": {"type": "string"},
+    "final_delivery_folder": {"type": "string"},
+    "canonical_zip": {
+      "type": "object",
+      "required": ["path", "filename", "root_name", "sha256", "size_bytes", "posix_portable"],
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": "string"},
+        "filename": {"type": "string"},
+        "root_name": {"type": "string"},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "size_bytes": {"type": "integer", "minimum": 1},
+        "posix_portable": {"type": "boolean"}
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "path", "sha256", "size_bytes", "notes"],
+        "additionalProperties": false,
+        "properties": {
+          "role": {"type": "string"},
+          "path": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "size_bytes": {"type": "integer", "minimum": 1},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "required": ["status", "commands"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {"const": "passing"},
+        "commands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["command", "expected_output"],
+            "additionalProperties": false,
+            "properties": {
+              "command": {"type": "string"},
+              "expected_output": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "provenance_hygiene": {
+      "type": "object",
+      "required": ["teacher_rubric_present", "rubric_gate_rule_id", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "teacher_rubric_present": {"const": false},
+        "rubric_gate_rule_id": {"const": "RUBRIC-R1-RUBRIC-FIRST"},
+        "status": {"type": "string"}
+      }
+    },
+    "naming": {
+      "type": "object",
+      "required": ["canonical_name", "historical_aliases", "canonicalization_note"],
+      "additionalProperties": false,
+      "properties": {
+        "canonical_name": {"const": "ASCReview"},
+        "historical_aliases": {"type": "array", "items": {"type": "string"}},
+        "canonicalization_note": {"type": "string"}
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "scope_confirmation": {
+      "type": "object",
+      "required": [
+        "dissertation_review_performed",
+        "teacher_specific_scoring_created",
+        "corpus_expansion_performed_in_remediation",
+        "dissertation_specialization_started"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "dissertation_review_performed": {"const": false},
+        "teacher_specific_scoring_created": {"const": false},
+        "corpus_expansion_performed_in_remediation": {"const": false},
+        "dissertation_specialization_started": {"const": false}
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "source": "uploaded_marking_scheme",
+  "total_score": "unknown",
+  "criteria": [],
+  "section_weights": [],
+  "unknowns": [
+    "section weights unknown unless provided",
+    "grade descriptors unknown unless provided",
+    "required headings unknown unless provided"
+  ],
+  "rules": [
+    "Do not invent rubric criteria.",
+    "If a criterion cannot be mapped, list it in unmapped_criteria.",
+    "Domain expertise is secondary to explicit marking requirements."
+  ],
+  "unmapped_criteria": []
+}

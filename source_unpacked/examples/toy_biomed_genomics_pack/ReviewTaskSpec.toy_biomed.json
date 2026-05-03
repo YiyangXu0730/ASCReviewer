@@ -1,0 +1,44 @@
+{
+  "task_id": "ASCREVIEW-TOY-BIOMED-0001",
+  "task_type": "article_review",
+  "writing_target": "toy biomedical genomics full draft",
+  "degree_or_publication_context": "formative biomedical writing workflow test",
+  "topic": "fictional cancer single-cell and spatial transcriptomics analysis",
+  "draft_stage": "early_draft",
+  "target_venue_or_assessment": "toy biomedical-genomics rubric",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [
+    "toy biomedical-genomics marking scheme",
+    "toy draft text",
+    "section contract"
+  ],
+  "missing_materials": [
+    "real domain source pack",
+    "real dataset accession",
+    "analysis object",
+    "raw or processed count matrix",
+    "figure files",
+    "code or notebook",
+    "teacher handbook"
+  ],
+  "review_modes": [
+    "full_draft_review",
+    "bioinformatics_methods_review",
+    "figures_legends_review",
+    "claim_strength_review"
+  ],
+  "output_format": "markdown_report",
+  "specialization_gate": {
+    "status": "toy_partial",
+    "can_review_draft": true,
+    "scope_limit": "workflow test only; no factual oncology adjudication and no real grading authority",
+    "required_before_review": [
+      "ReviewTaskSpec.toy_biomed.json",
+      "MarkingSchemeMap.toy_biomed.json",
+      "SectionReviewContract.toy_biomed.json"
+    ]
+  }
+}

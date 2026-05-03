@@ -1,0 +1,126 @@
+{
+  "report_id": "ASCREVIEW-TOY-BIOMED-DRYRUN-0001",
+  "target_section": "full_draft",
+  "rubric_score_estimate": "21-27 / 50",
+  "score_rationale": "Toy rubric supports limited formative scoring; strongest weaknesses are dataset provenance, single-cell/spatial method traceability, figure decoding, and overclaiming from enrichment/spatial association.",
+  "must_fix": [
+    {
+      "id": "TOY-BIO-MF-1",
+      "location": "Methods",
+      "issue": "Dataset provenance and accession details are absent.",
+      "evidence_tag": "teacher_rubric",
+      "rule_ids": ["RESULTS-R6-PUBLIC-REPOSITORY-QUERY-TRACE", "BIOINFO-R1-CODE-DATA-AVAILABILITY"]
+    },
+    {
+      "id": "TOY-BIO-MF-2",
+      "location": "Methods",
+      "issue": "Single-cell and spatial analysis details are too vague to audit.",
+      "evidence_tag": "source_pattern",
+      "rule_ids": ["BIOINFO-R6-SCRNASEQ-QC-ANNOTATION", "BIOINFO-R7-SPATIAL-TRANSCRIPTOMICS-CONTEXT"]
+    },
+    {
+      "id": "TOY-BIO-MF-3",
+      "location": "Results",
+      "issue": "Pathway enrichment and spatial association are overclaimed as mechanism and pan-cancer generalization.",
+      "evidence_tag": "source_pattern",
+      "rule_ids": ["BIOINFO-R9-PATHWAY-ENRICHMENT-SCOPE", "CLAIMS-R4-ENRICHMENT-NOT-MECHANISM", "DISCUSSION-R6-PANCANCER-GENERALIZATION-LIMITS"]
+    },
+    {
+      "id": "TOY-BIO-MF-4",
+      "location": "Figure 1 legend",
+      "issue": "Embedding, spatial map, and pathway dot plot are not decodable.",
+      "evidence_tag": "source_pattern",
+      "rule_ids": ["FIGURES-R5-EMBEDDING-SPATIAL-PLOT-DECODE", "FIGURES-R4-GENOMICS-QC-DECODABILITY"]
+    }
+  ],
+  "should_fix": [
+    {
+      "id": "TOY-BIO-SF-1",
+      "location": "Introduction",
+      "issue": "Biomedical background is unsourced.",
+      "evidence_tag": "provisional"
+    },
+    {
+      "id": "TOY-BIO-SF-2",
+      "location": "Discussion",
+      "issue": "Limitations are present but should explicitly map to each overclaim.",
+      "evidence_tag": "source_pattern"
+    }
+  ],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "MarkingSchemeMap.toy_biomed.json",
+      "evidence_type": "teacher_rubric"
+    },
+    {
+      "source": "library/provenance_ledger.seed.json",
+      "evidence_type": "source_pattern"
+    }
+  ],
+  "evidence_tags_used": [
+    "teacher_rubric",
+    "source_pattern",
+    "provisional"
+  ],
+  "claim_calibration": [
+    {
+      "claim": "These results prove that the tumor blocks immune infiltration through a cytokine mechanism across cancer types.",
+      "support_level": "unsupported",
+      "recommended_calibration": "In this toy draft, the UMAP, spatial pattern, and enrichment result would at most suggest a hypothesis about immune organization if provenance and methods were supplied."
+    }
+  ],
+  "data_method_traceability": [
+    {
+      "item": "fictional dataset TME-TOY-001",
+      "status": "insufficient",
+      "needed_detail": "repository, accession, release/access date, sample/cell/spot counts, data object, and code"
+    },
+    {
+      "item": "Reactome enrichment",
+      "status": "insufficient",
+      "needed_detail": "database version, background set, gene list/ranking, correction method, redundancy handling, and directionality"
+    }
+  ],
+  "figure_legend_provenance": [
+    {
+      "figure": "Figure 1",
+      "status": "insufficient",
+      "needed_detail": "embedding method, spatial coordinate/image context, counts, color scale, pathway dot meaning, and source data"
+    }
+  ],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "Toy rubric only",
+      "note": "Do not generalize toy scoring criteria to real dissertation review."
+    },
+    {
+      "boundary": "Source patterns only",
+      "note": "Single-cell, spatial, pathway, and pan-cancer rules support traceability and claim calibration, not factual adjudication without sources."
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Factual cancer biology",
+      "reason": "No real source pack",
+      "needed_to_resolve": "Task-specific domain literature"
+    },
+    {
+      "issue": "Analysis validity",
+      "reason": "No data, code, analysis object, or figures",
+      "needed_to_resolve": "Dataset accession, code/notebook, analysis object, and source data"
+    }
+  ],
+  "draft_stage_caveats": [
+    "Early-draft status means missing code, figures, and source data are recorded as must-fix development tasks, not final-submission allegations."
+  ],
+  "next_actions": [
+    "Add dataset accession and release/access date.",
+    "Add single-cell and spatial QC/method details.",
+    "Add enrichment parameters and pathway database version.",
+    "Rewrite mechanism and pan-cancer claims.",
+    "Provide figure files and source data before figure-level review."
+  ]
+}

@@ -1,0 +1,1072 @@
+{
+  "rounds": [
+    {
+      "round_id": "INTRO-01",
+      "skill_family": "introduction",
+      "builder_claims": [
+        {"claim": "Use context-gap-aim as a reusable introduction review pattern.", "evidence_type": "source_pattern", "source_ids": ["PATTERN-PAPER-STRUCTURE-2017", "GUIDE-STROBE-2007"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "The rule can become generic essay advice unless it names how a reviewer detects the gap and aim.", "required_patch": "Add detection checklist and failure mode."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added INT-P1 checklist and INT-F1/INT-F2 failure modes."}
+      ],
+      "rules_added": ["INTRO-R1-CONTEXT-GAP-AIM"],
+      "rules_modified": [],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Audit introduction claim calibration."]
+    },
+    {
+      "round_id": "INTRO-02",
+      "skill_family": "introduction",
+      "builder_claims": [
+        {"claim": "Introduction should calibrate rationale claims to evidence strength.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-ICMJE-MANUSCRIPT"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Domain heuristic could over-police assertive thesis writing and needs rubric priority caveat.", "required_patch": "Downgrade to secondary unless rubric/scientific accuracy is affected."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Skill now states heuristic-only rules cannot create must-fix issues unless tied to rubric or scientific accuracy."}
+      ],
+      "rules_added": ["INTRO-R2-NO-OVERCLAIM"],
+      "rules_modified": ["review-introduction priority rules"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["How much assertiveness a specific supervisor prefers must be resolved during specialization."],
+      "next_actions": ["Use actual domain sources in future task specialization."]
+    },
+    {
+      "round_id": "METH-01",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "Methods must include reproducible details for data, software, parameters, thresholds, statistics, and availability.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-EQUATOR-WRITING", "GUIDE-MDAR-2021", "PATTERN-REPRO-COMP-2013", "JOURNAL-BIOINFORMATICS-AUTHOR-GUIDELINES"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Journal-level expectations may exceed a dissertation marking scheme.", "required_patch": "Frame omissions as scientific risk unless rubric requires journal-level detail."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Methods skill differentiates rubric requirements from scientific reproducibility risk."}
+      ],
+      "rules_added": ["METHODS-R1-REPRODUCIBLE-DETAIL"],
+      "rules_modified": ["review-methodology known failure modes"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Audit study-design guideline routing."]
+    },
+    {
+      "round_id": "METH-02",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "Reporting guideline selection must be based on study design rather than disease topic.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-EQUATOR-LIBRARY", "GUIDE-STROBE-2007", "GUIDE-CONSORT-2010", "GUIDE-PRISMA-2020", "GUIDE-REMARK-2012"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "The rule could still apply a guideline before the user provides study design.", "required_patch": "Make inability to determine design a stop/provisional condition."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_with_stop_condition", "patch": "Added stop condition when study design cannot be determined."}
+      ],
+      "rules_added": ["METHODS-R2-STUDY-DESIGN-GUIDELINE"],
+      "rules_modified": ["review-methodology stop conditions"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Add bioinformatics-specific method audit."]
+    },
+    {
+      "round_id": "RESULTS-01",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Results should present evidence before broad interpretation.", "evidence_type": "source_pattern", "source_ids": ["PATTERN-PAPER-STRUCTURE-2017", "GUIDE-ICMJE-MANUSCRIPT"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Some dissertations allow brief result-level interpretation.", "required_patch": "Do not ban interpretation; require evidence to remain distinguishable."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Results skill permits brief local interpretation but flags dominance of interpretation over evidence."}
+      ],
+      "rules_added": ["RESULTS-R1-EVIDENCE-BEFORE-INTERPRETATION"],
+      "rules_modified": ["review-results known failure modes"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Audit extractable numerical claims."]
+    },
+    {
+      "round_id": "RESULTS-02",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Numerical claims should be extractable and trace to methods/figures.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-EQUATOR-WRITING", "GUIDE-STROBE-2007", "GUIDE-CONSORT-2010"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Exact values needed vary by study type and rubric.", "required_patch": "Phrase as 'where needed' and force design-specific specialization."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Pattern RES-P3 now says values, units, n, uncertainty, thresholds, and tests are required where appropriate."}
+      ],
+      "rules_added": ["RESULTS-R2-EXTRACTABLE-NUMBERS"],
+      "rules_modified": ["results pattern wording"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Connect figure-text consistency checks."]
+    },
+    {
+      "round_id": "DISC-01",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Discussion should answer the aim and interpret findings with limitations.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-ICMJE-MANUSCRIPT", "GUIDE-STROBE-2007", "GUIDE-REMARK-2012"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "The rule is too broad unless it checks whether limitations constrain specific claims.", "required_patch": "Add consequential limitation checklist."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added DISC-P3 and DISC-F3."}
+      ],
+      "rules_added": ["DISCUSSION-R1-INTERPRET-WITH-LIMITS"],
+      "rules_modified": ["discussion checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Audit no-new-unsourced-claims rule."]
+    },
+    {
+      "round_id": "DISC-02",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Discussion should not introduce major unsupported claims absent from Results or sources.", "evidence_type": "source_pattern", "source_ids": ["PATTERN-PAPER-STRUCTURE-2017", "GUIDE-ICMJE-MANUSCRIPT"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Literature synthesis can introduce sourced context in Discussion; rule must not ban that.", "required_patch": "Allow sourced literature context, reject only unsupported or untraceable claims."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "DISC-F5 distinguishes sourced context from new unsupported claims."}
+      ],
+      "rules_added": ["DISCUSSION-R2-NO-NEW-UNSUPPORTED-RESULTS"],
+      "rules_modified": ["discussion failure mode wording"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Future domain-specific contradiction checks need task sources."]
+    },
+    {
+      "round_id": "FIG-01",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Figure legends should decode panels, groups, measures, stats, symbols, abbreviations, and scale.", "evidence_type": "source_pattern", "source_ids": ["PATTERN-BETTER-FIGURES-2014", "GUIDE-ICMJE-MANUSCRIPT"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Cannot infer figure problems if actual images are absent.", "required_patch": "Add stop/provisional condition for missing figures/descriptions."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_with_stop_condition", "patch": "Figure skill stops or marks provisional if figure files/descriptions are absent."}
+      ],
+      "rules_added": ["FIGURES-R1-STANDALONE-LEGEND"],
+      "rules_modified": ["review-figures-legends stop conditions"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Add real figure checks during future task specialization."]
+    },
+    {
+      "round_id": "RUBRIC-01",
+      "skill_family": "rubric",
+      "builder_claims": [
+        {"claim": "All review comments should map first to teacher rubric criteria when available.", "evidence_type": "teacher_rubric", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Build mode has no actual teacher rubric, so the rule must force missing-information requests rather than inventing criteria.", "required_patch": "Add hard stop for scored review without rubric."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_with_stop_condition", "patch": "Rubric skill now stops when a scored review lacks a marking scheme."}
+      ],
+      "rules_added": ["RUBRIC-R1-RUBRIC-FIRST"],
+      "rules_modified": ["assess-rubric-alignment stop conditions"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Use actual marking scheme in future sessions."]
+    },
+    {
+      "round_id": "REV-01",
+      "skill_family": "revision",
+      "builder_claims": [
+        {"claim": "Revision status requires evidence in the revised draft, not just wording changes.", "evidence_type": "domain_expert_heuristic", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Heuristic lacks external source; should be medium confidence and not overrun supervisor feedback.", "required_patch": "Label secondary and prioritize teacher/supervisor feedback."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Revision skill states prior ASCReview comments are secondary to teacher instructions."}
+      ],
+      "rules_added": ["REVISION-R1-RESOLUTION-EVIDENCE"],
+      "rules_modified": ["revision-round priority rules"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Test on future prior-feedback/revised-draft pair."]
+    },
+    {
+      "round_id": "BIOINFO-01",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Bioinformatics methods review must check data accession, code, software versions, parameters, thresholds, and figure provenance.", "evidence_type": "official_guideline", "source_ids": ["JOURNAL-BIOINFORMATICS-AUTHOR-GUIDELINES", "GUIDE-GEO-MIAME-MINSEQE", "PATTERN-REPRO-COMP-2013"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "May demand unavailable code/data when institutional restrictions exist.", "required_patch": "Allow justified restrictions and classify unavailable items as missing information."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Bioinformatics skill asks for restrictions and marks unavailable items rather than assuming misconduct."}
+      ],
+      "rules_added": ["BIOINFO-R1-CODE-DATA-AVAILABILITY"],
+      "rules_modified": ["assess-bioinformatics-methods checklist and stop conditions"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Expand with task-specific data repositories during specialization."]
+    },
+    {
+      "round_id": "INTRO-03",
+      "skill_family": "introduction",
+      "builder_claims": [
+        {"claim": "Study-type rationale should be visible in the Introduction when a reporting guideline will later govern Methods.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-EQUATOR-LIBRARY", "GUIDE-TRIPOD-2015", "GUIDE-ARRIVE-2-2020"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This risks pulling Methods checklist content into the Introduction and inventing guideline applicability before specialization.", "required_patch": "Add 'scope signal only' wording and provisional status until study design is confirmed."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added INT-P7 and INTRO-R3 with explicit no-checklist and confirmed-design limits."}
+      ],
+      "rules_added": ["INTRO-R3-STUDY-TYPE-SCOPE-SIGNAL"],
+      "rules_modified": ["review-introduction checklist", "introduction patterns"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Some local dissertation briefs may not want study design signposting in the Introduction."],
+      "next_actions": ["Test during future specialization with actual section brief."]
+    },
+    {
+      "round_id": "INTRO-04",
+      "skill_family": "introduction",
+      "builder_claims": [
+        {"claim": "Public cancer-genomics and portal-derived rationale should be framed as exploratory unless validated.", "evidence_type": "source_pattern", "source_ids": ["METHOD-CBIOPORTAL-2013", "GUIDE-FAIR-2016"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "This could overfit ASCReview to cancer genomics and make public-data work sound weak by default.", "required_patch": "Mark as optional public-data pattern and allow stronger language when validation or direct evidence exists."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added INT-P6/INT-F7 and INTRO-R4 with explicit evidence-level classification."}
+      ],
+      "rules_added": ["INTRO-R4-PUBLIC-DATA-RATIONALE-LIMITS"],
+      "rules_modified": ["review-introduction provenance expectations"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Strength of public-data evidence remains task- and validation-dependent."],
+      "next_actions": ["Add domain-specific evidence only inside future specialization packs."]
+    },
+    {
+      "round_id": "METH-03",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "ARRIVE 2.0 should inform review of in vivo animal-study Methods.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-ARRIVE-2-2020", "GUIDE-ARRIVE-EE-2020"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "ARRIVE can be misapplied to any preclinical or cell-line work.", "required_patch": "Restrict to in vivo animal experiments and add non-applicability caveat."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_with_scope_limit", "patch": "Added METH-P6, METHODS-R3, and methodology stop/provisional language."}
+      ],
+      "rules_added": ["METHODS-R3-ANIMAL-STUDY-ARRIVE"],
+      "rules_modified": ["review-methodology checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Future specialization should record whether animal work exists."]
+    },
+    {
+      "round_id": "METH-04",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "Human biospecimen and resource traceability rules should be added for cancer/biomedical Methods.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-BRISQ-2011", "JOURNAL-CELL-STAR-KRT", "JOURNAL-NATURE-REPORTING-STANDARDS", "JOURNAL-JCI-AUTHOR-GUIDELINES"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "The draft rule could demand every BRISQ/KRT item even when only a high-level dissertation Methods chapter is expected.", "required_patch": "Use relevance/centrality language and distinguish traceability risk from rubric failure."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added METH-P7/METH-P8 and METHODS-R4/R5/R6 with central-resource and task-scope caveats."}
+      ],
+      "rules_added": ["METHODS-R4-BIOSPECIMEN-BRISQ", "METHODS-R5-KEY-RESOURCE-TRACEABILITY", "METHODS-R6-DATA-CODE-ACCESS-CONDITIONS"],
+      "rules_modified": ["review-methodology uncertainty handling"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Exact expected resource identifiers depend on rubric, journal target, and draft maturity."],
+      "next_actions": ["Add rubric-sensitive severity classifier in future validator/templates."]
+    },
+    {
+      "round_id": "RESULTS-03",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Results should preserve denominators, exclusions, missing data, and group definitions.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-ARRIVE-2-2020", "GUIDE-STROBE-2007", "GUIDE-CONSORT-2010", "GUIDE-SAMPL-2013"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Denominators can be irrelevant to some narrative or qualitative sections.", "required_patch": "Scope the rule to quantitative/empirical contexts where interpretation depends on counts."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RES-P6/RES-F6 and RESULTS-R3 with quantitative/empirical applicability limits."}
+      ],
+      "rules_added": ["RESULTS-R3-DENOMINATORS-EXCLUSIONS"],
+      "rules_modified": ["review-results checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Add template fields for n/exclusions in future report schema."]
+    },
+    {
+      "round_id": "RESULTS-04",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Evidence-bearing plots and tables should be traceable to source data or code/data availability statements.", "evidence_type": "source_pattern", "source_ids": ["JOURNAL-JCI-AUTHOR-GUIDELINES", "JOURNAL-NATURE-REPORTING-STANDARDS", "GUIDE-FAIR-2016"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Early dissertation drafts may not yet have final repositories; the workflow must not over-penalize draft maturity.", "required_patch": "Classify as pre-submission traceability risk unless the rubric requires it now."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RES-P7/RES-F7 and review-results uncertainty handling."}
+      ],
+      "rules_added": ["RESULTS-R4-UNDERLYING-DATA-TRACE"],
+      "rules_modified": ["review-results known failure modes"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Severity depends on review stage and submission target."],
+      "next_actions": ["Add draft-stage field to future ReviewTaskSpec."]
+    },
+    {
+      "round_id": "DISC-03",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Preclinical and animal-model Discussion should state model limits and avoid premature clinical translation.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-ARRIVE-EE-2020", "GUIDE-MDAR-2021"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A model-limit rule can become generic caution that weakens legitimate thesis argument.", "required_patch": "Frame as evidence-level calibration, not forced weak wording."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added DISC-P6 and DISC-F6 with evidence ladder language."}
+      ],
+      "rules_added": ["DISCUSSION-R3-PRECLINICAL-MODEL-LIMITS"],
+      "rules_modified": ["assess-scientific-claim-strength checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Acceptable assertiveness depends on supervisor and rubric."],
+      "next_actions": ["Resolve assertiveness preference during task specialization."]
+    },
+    {
+      "round_id": "DISC-04",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Prediction-model and public-data Discussion must distinguish validation, generalizability, utility, and exploratory status.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-TRIPOD-2015", "GUIDE-TRIPOD-AI-2024", "METHOD-CBIOPORTAL-2013"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Not every machine-learning or portal analysis is a clinical prediction model.", "required_patch": "Separate prediction-model rule from public-data association caveat."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added DISC-P7 and DISC-P8 as separate patterns; added DISC-F7."}
+      ],
+      "rules_added": ["DISCUSSION-R4-PREDICTION-MODEL-LIMITS", "CLAIMS-R2-TRANSLATIONAL-EVIDENCE-LADDER"],
+      "rules_modified": ["review-discussion checklist", "assess-scientific-claim-strength provenance expectations"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Public-data claim strength still requires task-specific validation sources."],
+      "next_actions": ["Add task-specific validation-source field in specialization output later."]
+    },
+    {
+      "round_id": "FIG-02",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Figure legends should decode statistical notation, n, tests, correction, and uncertainty displays.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-SAMPL-2013", "GUIDE-ARRIVE-2-2020", "JOURNAL-NATURE-REPORTING-STANDARDS"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Legend length constraints may make Methods the right home for some statistical detail.", "required_patch": "Allow legend or associated Methods as long as reader has a clear decoding path."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIG-P6/FIG-F6 and FIGURES-R3 with Methods fallback."}
+      ],
+      "rules_added": ["FIGURES-R3-STATISTICAL-VISUAL-ANNOTATION"],
+      "rules_modified": ["review-figures-legends checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Add figure statistical notation fields to future template."]
+    },
+    {
+      "round_id": "FIG-03",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Evidence-bearing figure panels should link to source data/resource provenance and distinguish schematic hypotheses from demonstrated findings.", "evidence_type": "source_pattern", "source_ids": ["JOURNAL-CELL-STAR-KRT", "GUIDE-FAIR-2016", "JOURNAL-JCI-AUTHOR-GUIDELINES"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Schematic figures in introductions and discussions may not need source-data links.", "required_patch": "Apply source-data trace only to evidence-bearing panels and require conceptual labels for schematics."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIG-P7/FIG-F7 and FIGURES-R2 with evidence-bearing scope."}
+      ],
+      "rules_added": ["FIGURES-R2-RESOURCE-AND-DATA-LEGEND"],
+      "rules_modified": ["review-figures-legends uncertainty handling"],
+      "rules_rejected": [],
+      "unresolved_disputes": [],
+      "next_actions": ["Future figure review should accept image files or detailed figure descriptions."]
+    },
+    {
+      "round_id": "BIOINFO-02",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "RNA-seq differential-expression Methods need design, normalization, filtering, dispersion/fold-change, correction, and package/version reporting.", "evidence_type": "source_pattern", "source_ids": ["METHOD-DESEQ2-2014", "PATTERN-REPRO-COMP-2013"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "The rule could mandate DESeq2 even when another method is appropriate.", "required_patch": "State that DESeq2 is a source pattern, not a required tool."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R2 and skill caveat against tool mandates."}
+      ],
+      "rules_added": ["BIOINFO-R2-RNASEQ-DESIGN-REPORTING"],
+      "rules_modified": ["assess-bioinformatics-methods known failure modes"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Specific best practice depends on sequencing assay and statistical design."],
+      "next_actions": ["Add assay-specific modules only during specialization."]
+    },
+    {
+      "round_id": "BIOINFO-03",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Public cancer-genomics portal analyses need portal, study ID, data release, profile, query, filter, endpoint, and validation reporting.", "evidence_type": "source_pattern", "source_ids": ["METHOD-CBIOPORTAL-2013", "GUIDE-FAIR-2016"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "cBioPortal-specific fields may not fit other portals.", "required_patch": "Phrase as portal/public-database pattern and specialize platform-specific fields later."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R3 and skill checklist with portal-general wording."}
+      ],
+      "rules_added": ["BIOINFO-R3-PUBLIC-CANCER-PORTAL-PROVENANCE"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Different public portals expose different metadata and release versioning."],
+      "next_actions": ["Add platform-specific checklists only after the task names the platform."]
+    },
+    {
+      "round_id": "RUBRIC-02",
+      "skill_family": "rubric",
+      "builder_claims": [
+        {"claim": "Guideline-derived comments must remain support/risk unless a teacher rubric incorporates the guideline.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-EQUATOR-LIBRARY", "GUIDE-ICMJE-MANUSCRIPT"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This is a governance rule rather than a source-derived guideline requirement; it must not pretend to be teacher evidence.", "required_patch": "Label as domain heuristic and keep missing-rubric stop condition."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RUBRIC-R2 as domain heuristic with high confidence governance caveat."}
+      ],
+      "rules_added": ["RUBRIC-R2-GUIDELINE-AS-SUPPORT-NOT-SCORE"],
+      "rules_modified": ["assess-rubric-alignment uncertainty handling"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Future rubrics may explicitly assign marks for reporting-guideline compliance."],
+      "next_actions": ["Specialization must detect guideline-incorporating rubrics."]
+    },
+    {
+      "round_id": "REV-02",
+      "skill_family": "revision",
+      "builder_claims": [
+        {"claim": "Revision comparison should identify new provenance and traceability gaps introduced by newly added text, figures, methods, data, or claims.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-FAIR-2016", "JOURNAL-NATURE-REPORTING-STANDARDS"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "This could turn revision review into a full new review and lose focus on prior feedback.", "required_patch": "Limit new issues to high-impact rubric, scientific validity, coherence, or provenance risks."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added REVISION-R2 and revision skill checklist with scoped new-issue handling."}
+      ],
+      "rules_added": ["REVISION-R2-NEW-TRACEABILITY-GAPS"],
+      "rules_modified": ["revision-round-compare checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Amount of new-issue review depends on revision round scope."],
+      "next_actions": ["Future ReviewTaskSpec should include revision scope and tolerance for new issue detection."]
+    },
+    {
+      "round_id": "METH-05",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "Routinely collected health-data and registry analyses need data-source, linkage, code/algorithm, cleaning, missingness, and access provenance.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-RECORD-2015", "GUIDE-STROBE-2007"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "RECORD can be over-applied to ordinary public omics datasets or all observational studies.", "required_patch": "Gate the rule to routinely collected health data, registry, EHR, administrative, or analogous real-world datasets."},
+        {"severity": "medium", "objection": "The rule risks turning access restrictions into a defect.", "required_patch": "Ask for access conditions and restriction rationale rather than demanding open access."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added METHODS-R7 and METH-P9/METH-F9 with routine-data scope and access-condition caveat."}
+      ],
+      "rules_added": ["METHODS-R7-ROUTINE-DATA-PROVENANCE"],
+      "rules_modified": ["review-methodology checklist", "methodology patterns"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Boundary cases between public research repositories and routinely collected clinical data need specialization context."],
+      "next_actions": ["Add platform-specific data-source fields only when the actual dataset is known."]
+    },
+    {
+      "round_id": "METH-06",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "qPCR and platform-dependent assays need assay-specific minimum information to support technical validity checks.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-MIQE-2009", "RESOURCE-ENCODE-DATA-STANDARDS"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Assay-specific minimum-information rules could be generalized into irrelevant demands across all methods.", "required_patch": "Require assay identification before applying qPCR/ENCODE-like fields."},
+        {"severity": "medium", "objection": "MIQE is metadata-only here; the corpus should not imply stored guideline text.", "required_patch": "Record MIQE as metadata-only and avoid excerpts."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added METHODS-R8 and METH-P10/METH-F10 with assay gate and metadata-only caution."}
+      ],
+      "rules_added": ["METHODS-R8-QPCR-MINIMUM-INFORMATION"],
+      "rules_modified": ["review-methodology provenance expectations"],
+      "rules_rejected": ["Universal assay minimum-information checklist"],
+      "unresolved_disputes": ["Future assay modules should be added only after task-specific assay identification."],
+      "next_actions": ["Create assay-specific specialization hooks later without broadening the generic core."]
+    },
+    {
+      "round_id": "RESULTS-05",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Sex/gender reporting should be checked in Results when biological or clinical relevance is established.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-SAGER-2016", "GUIDE-ARRIVE-2-2020", "GUIDE-STROBE-2007"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This can become a performative universal demand for stratification even when irrelevant or underpowered.", "required_patch": "Add relevance and feasibility gate; allow justified non-applicability."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RESULTS-R5 and RES-P9/RES-F9 with relevance-gated wording."}
+      ],
+      "rules_added": ["RESULTS-R5-SEX-GENDER-RELEVANCE"],
+      "rules_modified": ["review-results checklist"],
+      "rules_rejected": ["Always require sex/gender disaggregation"],
+      "unresolved_disputes": ["Whether a specific study is powered for subgroup analysis requires task-specific methods and statistics."],
+      "next_actions": ["Specialization should record whether sex/gender is biologically or clinically material."]
+    },
+    {
+      "round_id": "RESULTS-06",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "Public genomics repository results need reproducible query provenance and data-processing state.", "evidence_type": "source_pattern", "source_ids": ["RESOURCE-GEO-NCBI", "RESOURCE-NCI-GDC", "RESOURCE-AACR-GENIE", "METHOD-CBIOPORTAL-2013"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Different repositories expose different metadata and release concepts.", "required_patch": "Use repository-general fields and defer platform-specific details to specialization."},
+        {"severity": "high", "objection": "Repository names can make a result look automatically reproducible.", "required_patch": "Require query, filter, cohort/sample count, endpoint, and transformation state."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RESULTS-R6 and RES-P8/RES-F8 with repository-general provenance fields."}
+      ],
+      "rules_added": ["RESULTS-R6-PUBLIC-REPOSITORY-QUERY-TRACE"],
+      "rules_modified": ["review-results provenance expectations"],
+      "rules_rejected": ["Repository name alone is sufficient provenance"],
+      "unresolved_disputes": ["Some portals do not expose stable release IDs; access date may be the fallback."],
+      "next_actions": ["Add platform-specific query templates only after actual source selection."]
+    },
+    {
+      "round_id": "DISC-05",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Real-world, registry, and public clinico-genomic data require Discussion caveats for selection, linkage, missingness, endpoint, confounding, and validation limits.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-RECORD-2015", "RESOURCE-AACR-GENIE", "RESOURCE-NCI-GDC"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Caveats can be so heavy that legitimate exploratory contribution is undervalued.", "required_patch": "Frame as evidence-level calibration, not a demand to weaken all implications."},
+        {"severity": "medium", "objection": "Cancer registry source seeds could hardcode oncology into the generic core.", "required_patch": "Keep cancer sources optional examples under a general real-world/public-data rule."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added DISCUSSION-R5 and DISC-P9/DISC-F8 with general real-world data boundary."}
+      ],
+      "rules_added": ["DISCUSSION-R5-REAL-WORLD-DATA-LIMITS"],
+      "rules_modified": ["review-discussion checklist"],
+      "rules_rejected": ["Registry/public-data association proves treatment effect"],
+      "unresolved_disputes": ["How strongly to word caveats depends on target genre and rubric."],
+      "next_actions": ["Future specialization should identify evidence type before calibrating claim language."]
+    },
+    {
+      "round_id": "FIG-04",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Genomics and bioinformatics figures need QC, normalization, transformation, filtering, threshold, scale, grouping, and provenance decodability.", "evidence_type": "source_pattern", "source_ids": ["METHOD-RNASEQ-BEST-PRACTICES-2016", "RESOURCE-ENCODE-DATA-STANDARDS", "METHOD-SEQC-RNASEQ-2014"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Full technical details may belong in Methods or supplement, not every legend.", "required_patch": "Allow cross-reference to Methods/supplement as long as the decoding path is clear."},
+        {"severity": "medium", "objection": "ENCODE thresholds are assay-specific and cannot be universalized.", "required_patch": "Use ENCODE as QC-pattern evidence, not threshold mandates."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIGURES-R4 and FIG-P8/FIG-F8 with Methods/supplement fallback."}
+      ],
+      "rules_added": ["FIGURES-R4-GENOMICS-QC-DECODABILITY"],
+      "rules_modified": ["review-figures-legends checklist"],
+      "rules_rejected": ["All omics QC thresholds are universal"],
+      "unresolved_disputes": ["Figure-specific detail level depends on space constraints and report format."],
+      "next_actions": ["Toy workflow should check whether report templates can capture figure provenance fields."]
+    },
+    {
+      "round_id": "BIOINFO-04",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "RNA-seq methods review should cover design, QC, alignment/quantification, annotation, normalization, filtering, covariates, correction, and diagnostics.", "evidence_type": "source_pattern", "source_ids": ["METHOD-RNASEQ-BEST-PRACTICES-2016", "METHOD-DESEQ2-2014", "METHOD-LIMMA-2015", "METHOD-SEQC-RNASEQ-2014"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A long RNA-seq checklist could become a demanded pipeline and punish valid alternatives.", "required_patch": "State checklist elements as reporting and justification checks, not required workflow steps."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R4 and skill caveat against pipeline mandates."}
+      ],
+      "rules_added": ["BIOINFO-R4-RNASEQ-PIPELINE-QC"],
+      "rules_modified": ["assess-bioinformatics-methods positive/negative patterns"],
+      "rules_rejected": ["RNA-seq must follow one canonical pipeline"],
+      "unresolved_disputes": ["Single-cell, spatial, long-read, and bulk RNA-seq need separate future modules."],
+      "next_actions": ["Do not expand into assay modules until corpus sources are verified."]
+    },
+    {
+      "round_id": "BIOINFO-05",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Model-based omics claims should report design matrix/model, contrasts, covariates, batch handling, and biological comparison mapping.", "evidence_type": "source_pattern", "source_ids": ["METHOD-LIMMA-2015", "METHOD-DESEQ2-2014", "METHOD-RNASEQ-BEST-PRACTICES-2016"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Not every descriptive analysis has a model matrix or contrast.", "required_patch": "Gate the rule to model-based omics analyses and allow descriptive analyses to use other provenance fields."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R5 with model-based scope and descriptive-analysis limitation."}
+      ],
+      "rules_added": ["BIOINFO-R5-DESIGN-MATRIX-CONTRASTS"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": [],
+      "unresolved_disputes": ["Complex designs require statistics-aware specialization."],
+      "next_actions": ["Add design-matrix examples only from open sources in a future corpus pass."]
+    },
+    {
+      "round_id": "CLAIMS-03",
+      "skill_family": "claims",
+      "builder_claims": [
+        {"claim": "Data/code/material availability gaps should be described as reproducibility, verification, or policy risks, not misconduct, unless direct evidence supports escalation.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-NIH-DMS-2023", "JOURNAL-PLOS-DATA-CODE-POLICY", "GUIDE-FAIR-2016"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This rule is partly governance rather than source-derived reporting guidance.", "required_patch": "Label as domain heuristic and maintain direct-evidence threshold for misconduct language."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added CLAIMS-R3 and skill checklist to prevent unsupported escalation."}
+      ],
+      "rules_added": ["CLAIMS-R3-DATA-SHARING-NOT-MISCONDUCT"],
+      "rules_modified": ["assess-scientific-claim-strength checklist"],
+      "rules_rejected": ["Missing code or repository link equals misconduct"],
+      "unresolved_disputes": ["False availability statements require document-specific evidence."],
+      "next_actions": ["Future review should classify access gaps separately from integrity allegations."]
+    },
+    {
+      "round_id": "REV-03",
+      "skill_family": "revision",
+      "builder_claims": [
+        {"claim": "Revision comparison should detect when changes to data, preprocessing, model design, contrasts, thresholds, or figure code fail to propagate into downstream methods, results, legends, and claims.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-FAIR-2016", "METHOD-RNASEQ-BEST-PRACTICES-2016", "METHOD-LIMMA-2015"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "This could expand revision comparison into full reanalysis.", "required_patch": "Limit to consistency and traceability checks visible from changed materials, not independent reanalysis."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added REVISION-R3 and revision skill checklist for analysis-drift checks."}
+      ],
+      "rules_added": ["REVISION-R3-REANALYSIS-TRACEABILITY"],
+      "rules_modified": ["revision-round-compare checklist"],
+      "rules_rejected": ["Revision reviewer must independently rerun the analysis"],
+      "unresolved_disputes": ["Depth depends on whether scripts/data are provided in future specialization."],
+      "next_actions": ["Toy workflow dry run should include a revision-traceability placeholder."]
+    },
+    {
+      "round_id": "METH-07",
+      "skill_family": "methodology",
+      "builder_claims": [
+        {"claim": "Diagnostic accuracy and intervention-description guidance should be available as generic core routing for relevant designs.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-STARD-2015", "GUIDE-TIDIER-2014"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "STARD and TIDieR can become irrelevant checklist dumping if the draft is not a diagnostic or intervention study.", "required_patch": "Require design confirmation before applying either guideline."},
+        {"severity": "medium", "objection": "These guidelines could be mistaken for teacher scoring criteria.", "required_patch": "Keep as reporting-risk support unless the rubric incorporates them."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added METHODS-R9 with explicit design gate and rubric boundary."}
+      ],
+      "rules_added": ["METHODS-R9-DIAGNOSTIC-INTERVENTION-SCOPE"],
+      "rules_modified": ["review-methodology checklist", "methodology patterns"],
+      "rules_rejected": ["Apply STARD/TIDieR to every biomedical Methods section"],
+      "unresolved_disputes": ["Complex hybrid diagnostic-intervention studies may need multiple guideline modules during specialization."],
+      "next_actions": ["Future specialization should record study-design routing decisions."]
+    },
+    {
+      "round_id": "BIOINFO-06",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Single-cell RNA-seq review needs QC/filtering, annotation, clustering, marker testing, and analysis-object provenance checks.", "evidence_type": "source_pattern", "source_ids": ["METHOD-SCRNASEQ-BEST-PRACTICES-2019", "METHOD-SCANPY-2018"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "The rule could turn a tutorial or Scanpy paper into a required pipeline.", "required_patch": "State that the rule checks reportability and provenance, not the chosen tool."},
+        {"severity": "medium", "objection": "Different scRNA-seq platforms and questions require different QC choices.", "required_patch": "Require rationale and reporting rather than universal thresholds."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R6 with no-tool-mandate limitation."}
+      ],
+      "rules_added": ["BIOINFO-R6-SCRNASEQ-QC-ANNOTATION"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["Single-cell analysis must use Scanpy or one best-practice workflow"],
+      "unresolved_disputes": ["Single-cell multiome and immune-repertoire assays need future modules."],
+      "next_actions": ["Add modality-specific rules only after verified corpus expansion."]
+    },
+    {
+      "round_id": "BIOINFO-07",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Spatial transcriptomics review needs tissue/image, coordinate, resolution, segmentation/deconvolution, and spatial-statistics provenance.", "evidence_type": "source_pattern", "source_ids": ["METHOD-SPATIAL-TRANSCRIPTOMICS-ML-2022"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Spatial-specific fields could be incorrectly applied to non-spatial scRNA-seq or bulk data.", "required_patch": "Gate the rule to explicit spatial transcriptomics or spatially resolved assays."},
+        {"severity": "medium", "objection": "Some spatial methods are image-based and some sequencing-based, so required fields vary.", "required_patch": "Phrase fields as method-family provenance rather than universal thresholds."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R7 with spatial-specific scope and platform-dependent limitation."}
+      ],
+      "rules_added": ["BIOINFO-R7-SPATIAL-TRANSCRIPTOMICS-CONTEXT"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["Apply spatial-coordinate checks to all transcriptomics"],
+      "unresolved_disputes": ["High-resolution imaging-based spatial assays need additional source modules."],
+      "next_actions": ["Create separate spatial modality rules only after source verification."]
+    },
+    {
+      "round_id": "BIOINFO-08",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Proteomics and proteogenomics review needs accession, sample metadata, raw/processed file, workflow, and inference-level provenance.", "evidence_type": "source_pattern", "source_ids": ["RESOURCE-PRIDE-2022", "RESOURCE-CPTAC-NCI"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Repository deposition can be mistaken for full reproducibility.", "required_patch": "Retain separate checks for sample metadata, processing workflow, and inference level."},
+        {"severity": "medium", "objection": "CPTAC harmonized data may still include controlled access or portal-specific processing caveats.", "required_patch": "Record access and harmonization context explicitly."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R8 with repository-not-sufficient limitation."}
+      ],
+      "rules_added": ["BIOINFO-R8-PROTEOMICS-REPOSITORY-METADATA"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["Proteomics repository accession alone is enough"],
+      "unresolved_disputes": ["DIA, DDA, targeted proteomics, and phosphoproteomics need source-specific future rules."],
+      "next_actions": ["Expand proteomics corpus before adding assay-specific details."]
+    },
+    {
+      "round_id": "BIOINFO-09",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Pathway and gene-set enrichment review needs background, resource/version, ranking/threshold, correction, redundancy, and interpretation-scope checks.", "evidence_type": "source_pattern", "source_ids": ["METHOD-PATHWAY-ANALYSIS-2012", "RESOURCE-REACTOME-2022", "METHOD-PCAWG-PATHWAY-2020"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Pathway tools and databases can be overread as mechanistic proof.", "required_patch": "Pair with a claim-strength rule that separates enrichment from mechanism."},
+        {"severity": "medium", "objection": "Reactome is one resource, not the only acceptable database.", "required_patch": "Use resource/version fields generically."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R9 and linked it to CLAIMS-R4."}
+      ],
+      "rules_added": ["BIOINFO-R9-PATHWAY-ENRICHMENT-SCOPE"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["Enriched pathway equals demonstrated mechanism"],
+      "unresolved_disputes": ["Database choice and redundancy reduction depend on the analysis question."],
+      "next_actions": ["Add pathway-reporting examples in future corpus expansion."]
+    },
+    {
+      "round_id": "RESULTS-07",
+      "skill_family": "results",
+      "builder_claims": [
+        {"claim": "High-dimensional plot-dependent Results need traceability from visual claim to analysis object, counts, transformations, grouping, and Methods/source data.", "evidence_type": "source_pattern", "source_ids": ["METHOD-SCRNASEQ-BEST-PRACTICES-2019", "METHOD-SPATIAL-TRANSCRIPTOMICS-ML-2022", "RESOURCE-PRIDE-2022"]}
+      ],
+      "auditor_objections": [
+        {"severity": "medium", "objection": "Results sections cannot contain every parameter.", "required_patch": "Allow Methods/supplement/source-data cross-reference if the trace path is explicit."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RESULTS-R7 with cross-reference allowance."}
+      ],
+      "rules_added": ["RESULTS-R7-HIGH-DIMENSIONAL-PLOT-TRACE"],
+      "rules_modified": ["review-results checklist"],
+      "rules_rejected": ["High-dimensional plots are self-evident evidence"],
+      "unresolved_disputes": ["Detail level depends on figure complexity and target format."],
+      "next_actions": ["Keep high-dimensional traceability fields in report templates."]
+    },
+    {
+      "round_id": "FIG-05",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Single-cell, spatial, pathway, and proteomics figures need decoding for object provenance, annotation labels, coordinates/embeddings, counts, scales, and source data.", "evidence_type": "source_pattern", "source_ids": ["METHOD-SCRNASEQ-BEST-PRACTICES-2019", "METHOD-SPATIAL-TRANSCRIPTOMICS-ML-2022", "RESOURCE-PRIDE-2022"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "UMAP geometry and spatial colors can be overinterpreted as direct biology.", "required_patch": "Require legend decoding and claim calibration rather than aesthetic critique."},
+        {"severity": "medium", "objection": "Full provenance may sit outside the legend.", "required_patch": "Allow legend-to-Methods/source-data references."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIGURES-R5 and FIG-P9/FIG-F9."}
+      ],
+      "rules_added": ["FIGURES-R5-EMBEDDING-SPATIAL-PLOT-DECODE"],
+      "rules_modified": ["review-figures-legends checklist"],
+      "rules_rejected": ["Embedding separation proves biology"],
+      "unresolved_disputes": ["Figure details depend on whether actual image files are available."],
+      "next_actions": ["Figure review must stop or mark provisional when images are unavailable."]
+    },
+    {
+      "round_id": "DISC-06",
+      "skill_family": "discussion",
+      "builder_claims": [
+        {"claim": "Pan-cancer analyses need explicit tumor-type heterogeneity, cohort, platform, data-tier, and validation caveats before broad generalization.", "evidence_type": "source_pattern", "source_ids": ["DOMAIN-PCAWG-2020", "DOMAIN-TCGA-PANCAN-2013", "RESOURCE-CPTAC-NCI"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Pan-cancer sources can overfit the generic core to oncology.", "required_patch": "Keep rule optional and activated only when pan-cancer/cross-tumor evidence is used."},
+        {"severity": "medium", "objection": "The rule could weaken legitimate cross-cancer synthesis.", "required_patch": "Ask for boundary and validation, not removal of all generalization."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added DISCUSSION-R6 with optional pan-cancer scope."}
+      ],
+      "rules_added": ["DISCUSSION-R6-PANCANCER-GENERALIZATION-LIMITS"],
+      "rules_modified": ["review-discussion checklist"],
+      "rules_rejected": ["Pan-cancer finding applies to all cancers without qualification"],
+      "unresolved_disputes": ["Acceptable breadth depends on the source evidence and target audience."],
+      "next_actions": ["Specialization should record whether pan-cancer evidence is actually in scope."]
+    },
+    {
+      "round_id": "CLAIMS-04",
+      "skill_family": "claims",
+      "builder_claims": [
+        {"claim": "Enrichment, clustering, spatial co-localization, and proteogenomic correlations should not be worded as mechanism without direct validation.", "evidence_type": "source_pattern", "source_ids": ["METHOD-PATHWAY-ANALYSIS-2012", "METHOD-PCAWG-PATHWAY-2020", "METHOD-SCRNASEQ-BEST-PRACTICES-2019"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This could over-weaken every mechanistic sentence in omics writing.", "required_patch": "Allow mechanistic language when functional, perturbational, causal, or independent validation is present."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added CLAIMS-R4 with validation escape condition."}
+      ],
+      "rules_added": ["CLAIMS-R4-ENRICHMENT-NOT-MECHANISM"],
+      "rules_modified": ["assess-scientific-claim-strength checklist"],
+      "rules_rejected": ["Omics association alone demonstrates mechanism"],
+      "unresolved_disputes": ["Mechanistic sufficiency requires task-specific evidence."],
+      "next_actions": ["Future domain packs should identify validation evidence explicitly."]
+    },
+    {
+      "round_id": "TOY-BIOMED-01",
+      "skill_family": "toy_fixture",
+      "builder_claims": [
+        {"claim": "A biomedical/cancer/genomics toy fixture should test the generic workflow's single-cell, spatial, pathway, figure, and claim-calibration behavior without touching the dissertation.", "evidence_type": "provisional", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A cancer toy fixture may accidentally become topic-specific dissertation logic.", "required_patch": "Explicitly mark it unrelated and avoid prostate/AR/ENZ/ATM/ATR/DDR logic."},
+        {"severity": "medium", "objection": "Toy scoring may look like a real biomedical grading model.", "required_patch": "Label score and rubric as toy-only."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_fixture_with_scope_limits", "patch": "Created toy_biomed_genomics_pack with explicit non-dissertation, non-corpus, toy-only boundaries."}
+      ],
+      "rules_added": [],
+      "rules_modified": ["examples/toy_biomed_genomics_pack", "scripts/validate_ascreview_build.py"],
+      "rules_rejected": ["Use toy biomedical rubric for real dissertation review"],
+      "unresolved_disputes": ["Future biomedical toy fixtures could test other modalities but must remain unrelated to user drafts."],
+      "next_actions": ["Use toy fixture as validation regression, not source evidence."]
+    },
+    {
+      "round_id": "RUBRIC-03",
+      "skill_family": "rubric",
+      "builder_claims": [
+        {"claim": "A unified ASCReview specialization gate should record draft, marking scheme, figures/assets, source constraints, and assessment context before enabling review modes.", "evidence_type": "domain_expert_heuristic", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A contract could become form-filling that blocks useful formative help.", "required_patch": "Disable only the review modes directly blocked by missing inputs and allow explicit non-scored formative review."},
+        {"severity": "high", "objection": "The contract could be mistaken for the actual marking scheme.", "required_patch": "Keep rubric extraction and scoring dependent on uploaded rubric/brief/teacher feedback."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added RUBRIC-R3, SpecializationInputContract schema/template, permissions, and severity taxonomy."}
+      ],
+      "rules_added": ["RUBRIC-R3-SPECIALIZATION-INPUT-GATE"],
+      "rules_modified": ["assess-rubric-alignment checklist", "ASCReview core and specialization prompts"],
+      "rules_rejected": ["Missing marking scheme blocks all non-scored formative review", "Specialization contract can substitute for teacher rubric"],
+      "unresolved_disputes": ["Real scoring remains impossible until a teacher rubric or equivalent assessment criteria are supplied."],
+      "next_actions": ["Future dissertation-specific sessions should compile SpecializationInputContract.json first."]
+    },
+    {
+      "round_id": "BIOINFO-10",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Single-cell multimodal work needs modality routing and paired-versus-integrated dataset provenance before integrated biological claims are reviewed.", "evidence_type": "source_pattern", "source_ids": ["METHOD-SC-MULTIMODAL-BEST-PRACTICES-2023", "METHOD-SCRNASEQ-BEST-PRACTICES-2019"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Best-practice papers can become mandatory workflow prescriptions.", "required_patch": "State that the rule routes modalities and checks reportability, not tool choice."},
+        {"severity": "medium", "objection": "Multiome, CITE-seq, immune repertoire, and spatial modalities have different minimum details.", "required_patch": "Require modality-specific routing before applying any checklist."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R10 and modality-routing checklist text."}
+      ],
+      "rules_added": ["BIOINFO-R10-SC-MULTIMODAL-ROUTING"],
+      "rules_modified": ["assess-bioinformatics-methods checklist", "methodology modality-routing patterns"],
+      "rules_rejected": ["All single-cell studies require multimodal integration", "One single-cell multimodal workflow is mandatory"],
+      "unresolved_disputes": ["Future corpus should add stronger source modules for each single-cell modality subtype."],
+      "next_actions": ["Specialization should record whether modalities are paired, unpaired, integrated, or separately analyzed."]
+    },
+    {
+      "round_id": "BIOINFO-11",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "AIRR-seq and immune repertoire review needs MiAIRR/AIRR-style metadata, receptor annotation, germline-reference, repository, and tool provenance checks.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-AIRR-SHARING-2017", "GUIDE-AIRR-REPRESENTATION-2018", "GUIDE-AIRR-STANDARDS"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "AIRR standards could be applied to ordinary immune-cell marker expression or non-repertoire immunology.", "required_patch": "Gate the rule to adaptive immune receptor repertoire data."},
+        {"severity": "medium", "objection": "Current AIRR documentation can evolve.", "required_patch": "Require versioned standard/documentation verification during specialization."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R11 with AIRR-only scope and versioning caveat."}
+      ],
+      "rules_added": ["BIOINFO-R11-AIRR-METADATA-ANNOTATION"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["AIRR metadata standards apply to all immunology or all single-cell studies"],
+      "unresolved_disputes": ["Specific AIRR repository/API details require source-specific specialization."],
+      "next_actions": ["Add AIRR data commons examples only after verifying source reuse and version."]
+    },
+    {
+      "round_id": "BIOINFO-12",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Long-read sequencing review needs platform, basecalling, read quality, error correction, alignment/assembly, coverage, caller, benchmark, and validation context.", "evidence_type": "source_pattern", "source_ids": ["METHOD-LONG-READ-ANALYSIS-2020"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "The rule could imply long reads are always better or always required.", "required_patch": "Frame as a routing and reporting rule only when long-read data are actually used."},
+        {"severity": "medium", "objection": "ONT, PacBio HiFi/CLR, Iso-Seq, direct RNA, SV, methylation, and assembly use cases differ.", "required_patch": "Use platform/claim fit rather than one checklist."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R12 with platform-specific limitations."}
+      ],
+      "rules_added": ["BIOINFO-R12-LONG-READ-PLATFORM-QC"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["Long-read sequencing is automatically more valid than short-read sequencing"],
+      "unresolved_disputes": ["Long-read RNA, SV, methylation, and assembly submodules need future source expansion."],
+      "next_actions": ["Add benchmark-specific long-read sources in a later run."]
+    },
+    {
+      "round_id": "BIOINFO-13",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Proteomics review needs acquisition-mode routing across DDA, DIA/SWATH, targeted, labeling, spectral library, FDR, missingness, and peptide/protein inference details.", "evidence_type": "source_pattern", "source_ids": ["METHOD-DIA-SWATH-TUTORIAL-2018", "RESOURCE-PRIDE-2022"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "DIA/SWATH guidance could be imposed on DDA, TMT, or targeted workflows.", "required_patch": "Require acquisition-mode routing before applying details."},
+        {"severity": "medium", "objection": "Repository metadata can be mistaken for enough methods detail.", "required_patch": "Keep repository provenance separate from acquisition/search/scoring workflow detail."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R13 with mode-routing and repository-not-sufficient caveat."}
+      ],
+      "rules_added": ["BIOINFO-R13-DIA-DDA-PROTEOMICS-MODE"],
+      "rules_modified": ["assess-bioinformatics-methods checklist"],
+      "rules_rejected": ["DIA/SWATH is the default requirement for proteomics review"],
+      "unresolved_disputes": ["TMT, targeted proteomics, PRM/SRM, and proteogenomics need later source-specific rules."],
+      "next_actions": ["Expand proteomics corpus before adding stronger mode-specific thresholds."]
+    },
+    {
+      "round_id": "BIOINFO-14",
+      "skill_family": "bioinformatics",
+      "builder_claims": [
+        {"claim": "Phosphoproteomics review needs enrichment, site-localization confidence, protein-level normalization, kinase/pathway inference, multiplicity correction, and validation caveats.", "evidence_type": "source_pattern", "source_ids": ["METHOD-PHOSPHOPROTEOMICS-CANCER-2023", "RESOURCE-PRIDE-2022"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "Kinase enrichment and phosphorylation-site abundance can be overread as causal signaling.", "required_patch": "Require claim calibration and validation escape condition."},
+        {"severity": "medium", "objection": "Phosphoproteomics varies by enrichment chemistry, acquisition mode, and quantification design.", "required_patch": "Check reportability and inference scope, not one protocol."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added BIOINFO-R14 and claim-strength checklist updates."}
+      ],
+      "rules_added": ["BIOINFO-R14-PHOSPHOPROTEOMICS-SITE-INFERENCE"],
+      "rules_modified": ["assess-bioinformatics-methods checklist", "assess-scientific-claim-strength checklist"],
+      "rules_rejected": ["Phosphorylation or kinase enrichment proves causal pathway activation"],
+      "unresolved_disputes": ["Mechanistic sufficiency depends on perturbational or independent validation evidence."],
+      "next_actions": ["Future cancer-domain packs should identify validation evidence explicitly."]
+    },
+    {
+      "round_id": "FIG-06",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Highly multiplexed tissue imaging figures need tissue/sample, marker/channel, platform, image-processing, segmentation, region, scale, color, and source-data provenance checks.", "evidence_type": "official_guideline", "source_ids": ["GUIDE-MITI-2022", "GUIDE-MITI-CONSORTIUM"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "MITI-style expectations could be applied to every microscopy figure or ordinary plot.", "required_patch": "Gate the rule to highly multiplexed tissue imaging or related imaging-based spatial assays."},
+        {"severity": "medium", "objection": "Full metadata may live in repository or supplement, not the legend.", "required_patch": "Allow explicit cross-reference paths."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIGURES-R6, FIG-P10, and FIG-F10 with cross-reference allowance."}
+      ],
+      "rules_added": ["FIGURES-R6-MULTIPLEXED-TISSUE-IMAGING-PROVENANCE"],
+      "rules_modified": ["review-figures-legends checklist", "figure pattern library"],
+      "rules_rejected": ["MITI metadata checks apply to every figure"],
+      "unresolved_disputes": ["Severity depends on whether actual figure images, legends, and source-data links are provided."],
+      "next_actions": ["Figure review must keep visual findings provisional when assets are unavailable."]
+    },
+    {
+      "round_id": "TOY-PARTIAL-01",
+      "skill_family": "toy_fixture",
+      "builder_claims": [
+        {"claim": "A partial-input specialization fixture should demonstrate that ASCReview can prepare workflow state and missing-information requests without reviewing or scoring a draft.", "evidence_type": "provisional", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A partial context fixture might normalize reviewing without draft or rubric.", "required_patch": "Set review permissions to false and output MissingInformationRequest only."},
+        {"severity": "medium", "objection": "The fixture could ask for dissertation materials despite the user still being in build mode.", "required_patch": "Label it non-dissertation and phrase requests as future real-session requirements."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_fixture_with_blocked_permissions", "patch": "Created toy_partial_specialization_pack and schema-valid partial contract with blocked draft/scoring/figure/factual/export permissions."}
+      ],
+      "rules_added": [],
+      "rules_modified": ["examples/toy_partial_specialization_pack", "scripts/validate_ascreview_build.py"],
+      "rules_rejected": ["Partial specialization context permits draft review or rubric scoring"],
+      "unresolved_disputes": ["Real-session behavior still needs testing once actual user materials are supplied."],
+      "next_actions": ["Use this fixture as a regression check for missing-input triage."]
+    },
+    {
+      "round_id": "REV-04",
+      "skill_family": "revision",
+      "builder_claims": [
+        {"claim": "Revision-round comparison requires revised material and a prior issue record before classifying issue resolution or score movement.", "evidence_type": "domain_expert_heuristic", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This could block useful revision planning when prior feedback is incomplete.", "required_patch": "Permit revision input triage while blocking resolution classification and score movement."},
+        {"severity": "medium", "objection": "The rule might imply previous draft is always mandatory even if prior feedback is sufficiently detailed.", "required_patch": "Require at least revised draft plus prior feedback/review record, and mark missing previous draft as a limitation."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added REVISION-R4 and revision skill updates for input gating."}
+      ],
+      "rules_added": ["REVISION-R4-REVISION-INPUT-GATE"],
+      "rules_modified": ["revision-round-compare checklist"],
+      "rules_rejected": ["Revision resolution can be classified without prior feedback or revised material"],
+      "unresolved_disputes": ["Real-session revision comparison depth depends on available prior feedback, previous draft, and response notes."],
+      "next_actions": ["Use revision partial fixture as regression coverage."]
+    },
+    {
+      "round_id": "FIG-07",
+      "skill_family": "figures",
+      "builder_claims": [
+        {"claim": "Figure review needs an explicit asset gate so visual, panel-level, source-data, and figure-text findings are enabled only when the relevant materials are available.", "evidence_type": "domain_expert_heuristic", "source_ids": ["GUIDE-ICMJE-MANUSCRIPT", "PATTERN-BETTER-FIGURES-2014"]}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "This could block text-only review of figure references.", "required_patch": "Allow text-only figure-reference checks when explicitly labeled and keep visual/panel findings blocked."},
+        {"severity": "medium", "objection": "A figure asset alone does not enable source-data or figure-text consistency review.", "required_patch": "Separate asset, legend, source-data, and Results-text permissions."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "modified_accept", "patch": "Added FIGURES-R7 plus FIG-P11/FIG-F11 and figure skill updates."}
+      ],
+      "rules_added": ["FIGURES-R7-FIGURE-ASSET-GATE"],
+      "rules_modified": ["review-figures-legends checklist", "figure pattern library"],
+      "rules_rejected": ["Visual figure critique can be generated from absent assets"],
+      "unresolved_disputes": ["A sufficiently detailed figure description may enable some non-visual checks, but true visual review needs assets."],
+      "next_actions": ["Keep figure permission fields in future specialization contracts and dry-run reports."]
+    },
+    {
+      "round_id": "TOY-REVISION-01",
+      "skill_family": "toy_fixture",
+      "builder_claims": [
+        {"claim": "A revision partial fixture should verify that ASCReview requests revised draft and prior feedback rather than inventing issue-resolution status.", "evidence_type": "provisional", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A revision fixture could still imply score improvement without a rubric or prior score basis.", "required_patch": "Keep scoring permission false and forbid rubric_failure classification."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_fixture_with_blocked_permissions", "patch": "Created toy_revision_partial_pack and validator checks for blocked permissions."}
+      ],
+      "rules_added": [],
+      "rules_modified": ["examples/toy_revision_partial_pack", "scripts/validate_ascreview_build.py", "scripts/validate_negative_cases.py"],
+      "rules_rejected": ["Revision partial context permits resolution classification or score movement"],
+      "unresolved_disputes": ["Actual revision-review behavior still needs real prior feedback and revised material."],
+      "next_actions": ["Use the fixture as regression coverage for revision input triage."]
+    },
+    {
+      "round_id": "TOY-FIGURE-01",
+      "skill_family": "toy_fixture",
+      "builder_claims": [
+        {"claim": "A figure permission fixture should verify both absent-asset blocking and present-asset limited review without rubric scoring.", "evidence_type": "provisional", "source_ids": []}
+      ],
+      "auditor_objections": [
+        {"severity": "high", "objection": "A present figure asset could be mistaken as permission for scored figure review or factual interpretation.", "required_patch": "Keep scoring and domain factual permissions false without rubric/source data."},
+        {"severity": "medium", "objection": "An absent asset could still leave text-only figure-reference review possible.", "required_patch": "Block visual review specifically and label text-only checks separately."}
+      ],
+      "arbiter_decisions": [
+        {"decision": "accept_fixture_with_split_permissions", "patch": "Created toy_figure_permission_pack with absent and present dry-run findings plus negative tests."}
+      ],
+      "rules_added": [],
+      "rules_modified": ["examples/toy_figure_permission_pack", "scripts/validate_ascreview_build.py", "scripts/validate_negative_cases.py"],
+      "rules_rejected": ["Figure asset present means rubric scoring is allowed", "Figure asset absent still permits visual critique"],
+      "unresolved_disputes": ["Detailed text descriptions may support limited non-visual checks, but not visual evidence claims."],
+      "next_actions": ["Exercise figure permission gating in a real specialization session when figure assets are supplied."]
+    }
+  ]
+}

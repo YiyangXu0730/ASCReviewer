@@ -1,0 +1,43 @@
+name: Validate ASCReview Workflow
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Locate files
+        shell: bash
+        run: |
+          find . -maxdepth 3 -type f | sort | sed 's#^\./##' | head -300
+
+      - name: Run validators if available
+        shell: bash
+        run: |
+          set -e
+          if [ -f "source_unpacked/scripts/validate_pack.py" ]; then
+            cd source_unpacked
+            python scripts/validate_pack.py
+            python scripts/validate_ascreview_build.py
+            python scripts/validate_negative_cases.py
+            if [ -f scripts/validate_final_delivery.py ]; then
+              python scripts/validate_final_delivery.py || true
+            fi
+            if [ -f scripts/validate_final_delivery_negative_cases.py ]; then
+              python scripts/validate_final_delivery_negative_cases.py || true
+            fi
+          else
+            echo "No unpacked validator scripts found. Artifact-only validation skipped."
+          fi

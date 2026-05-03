@@ -1,0 +1,70 @@
+{
+  "task_id": "ASCREVIEW-TOY-REVISION-PARTIAL-0001",
+  "task_type": "revision_round_review",
+  "writing_target": "non-dissertation synthetic revision-round fixture",
+  "degree_or_publication_context": "generic formative revision preparation",
+  "topic": "none",
+  "draft_stage": "revision_round",
+  "target_venue_or_assessment": "toy fixture only",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [
+    "generic revision task intent",
+    "source policy"
+  ],
+  "missing_materials": [
+    "revised draft",
+    "previous draft or reviewed section",
+    "prior feedback or previous ASCReview report",
+    "prior score basis",
+    "marking scheme",
+    "revised figures/assets if figure changes are in scope"
+  ],
+  "review_modes": [
+    "revision_round_input_triage"
+  ],
+  "specialization_gate": {
+    "status": "incomplete",
+    "can_review_draft": false,
+    "required_before_review": [
+      "revised_draft",
+      "prior_feedback_or_report",
+      "previous_draft_or_reviewed_section"
+    ]
+  },
+  "specialization_input_contract": {
+    "path": "SpecializationInputContract.toy_revision_partial.json",
+    "status": "incomplete",
+    "required_input_keys": [
+      "draft",
+      "marking_scheme",
+      "figures_assets",
+      "source_constraints",
+      "assessment_context"
+    ]
+  },
+  "routing_decisions": [
+    {
+      "route_type": "review_mode",
+      "selected_value": "revision_round_input_triage",
+      "applies": true,
+      "rationale": "The fixture lacks revised material and prior feedback.",
+      "confidence": "high"
+    }
+  ],
+  "severity_policy": {
+    "taxonomy_source": "SpecializationInputContract.toy_revision_partial.json",
+    "allowed_severity_ids": [
+      "rubric_failure",
+      "scientific_validity_risk",
+      "reporting_completeness_risk",
+      "reproducibility_risk",
+      "policy_compliance_risk",
+      "draft_stage_todo",
+      "style_or_clarity_polish"
+    ]
+  },
+  "output_format": "missing_information_request_only"
+}

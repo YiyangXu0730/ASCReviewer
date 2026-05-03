@@ -1,0 +1,21 @@
+# Codex workspace configuration for ASCReview build.
+# Adjust model/profile locally if needed.
+
+model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[profiles.longrun]
+model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+
+[profiles.conservative]
+model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "read-only"
+
+[profiles.builder]
+model = "gpt-5.4"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"

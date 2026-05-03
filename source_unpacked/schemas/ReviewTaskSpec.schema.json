@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview ReviewTaskSpec",
+  "type": "object",
+  "required": [
+    "task_id",
+    "task_type",
+    "writing_target",
+    "priority_rules",
+    "available_materials",
+    "missing_materials"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "task_type": {
+      "type": "string"
+    },
+    "writing_target": {
+      "type": "string"
+    },
+    "degree_or_publication_context": {
+      "type": "string"
+    },
+    "topic": {
+      "type": "string"
+    },
+    "priority_rules": {
+      "type": "object",
+      "required": [
+        "teacher_marking_scheme",
+        "domain_expertise"
+      ],
+      "properties": {
+        "teacher_marking_scheme": {
+          "enum": [
+            "highest"
+          ]
+        },
+        "domain_expertise": {
+          "enum": [
+            "secondary"
+          ]
+        }
+      }
+    },
+    "available_materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing_materials": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_format": {
+      "type": "string"
+    },
+    "draft_stage": {
+      "type": "string",
+      "description": "formative_outline | early_draft | supervisor_review | pre_submission | journal_submission | revision_round | unknown"
+    },
+    "target_venue_or_assessment": {
+      "type": "string",
+      "description": "Institution, module, dissertation handbook, journal, conference, or formative review context."
+    },
+    "specialization_gate": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "can_review_draft": {
+          "type": "boolean"
+        },
+        "scope_limit": {
+          "type": "string"
+        },
+        "required_before_review": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "specialization_input_contract": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "not_started",
+            "incomplete",
+            "ready_for_non_scored_review",
+            "ready_for_scored_review"
+          ]
+        },
+        "required_input_keys": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "draft",
+              "marking_scheme",
+              "figures_assets",
+              "source_constraints",
+              "assessment_context"
+            ]
+          }
+        }
+      }
+    },
+    "routing_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "route_type": {
+            "type": "string"
+          },
+          "selected_value": {
+            "type": "string"
+          },
+          "applies": {
+            "type": "boolean"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "confidence": {
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        }
+      }
+    },
+    "severity_policy": {
+      "type": "object",
+      "properties": {
+        "taxonomy_source": {
+          "type": "string"
+        },
+        "allowed_severity_ids": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "rubric_failure",
+              "scientific_validity_risk",
+              "reporting_completeness_risk",
+              "reproducibility_risk",
+              "policy_compliance_risk",
+              "draft_stage_todo",
+              "style_or_clarity_polish"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

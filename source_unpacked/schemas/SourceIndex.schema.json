@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview SourceIndex",
+  "type": "object",
+  "required": ["sources"],
+  "additionalProperties": false,
+  "properties": {
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "title",
+          "source_type",
+          "journal_or_body",
+          "doi",
+          "pmid",
+          "pmcid",
+          "url",
+          "license",
+          "reuse_status",
+          "evidence_scope",
+          "accessed_at",
+          "notes"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "pattern": "^[A-Z0-9][A-Z0-9-]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3
+          },
+          "source_type": {
+            "enum": [
+              "domain_seed_metadata",
+              "funder_policy",
+              "journal_author_guideline",
+              "journal_policy",
+              "methods_benchmark_metadata",
+              "official_data_repository",
+              "official_data_standard",
+              "official_data_stewardship_principle",
+              "official_guideline",
+              "official_guideline_index",
+              "official_guideline_toolkit",
+              "official_reporting_framework",
+              "official_reporting_guideline",
+              "official_reporting_guideline_explanation",
+              "open_access_domain_pattern",
+              "open_access_methods_pattern",
+              "open_access_repository_pattern",
+              "open_access_writing_pattern",
+              "repository_reporting_guideline",
+              "source_reuse_policy"
+            ]
+          },
+          "journal_or_body": {
+            "type": "string",
+            "minLength": 2
+          },
+          "doi": {
+            "type": ["string", "null"]
+          },
+          "pmid": {
+            "type": ["string", "null"]
+          },
+          "pmcid": {
+            "type": ["string", "null"]
+          },
+          "url": {
+            "type": ["string", "null"]
+          },
+          "license": {
+            "type": ["string", "null"]
+          },
+          "reuse_status": {
+            "enum": ["metadata_only", "permitted_excerpt", "open_reuse_verified"]
+          },
+          "evidence_scope": {
+            "type": "string",
+            "minLength": 8
+          },
+          "accessed_at": {
+            "type": "string",
+            "pattern": "^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

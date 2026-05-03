@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview MarkingSchemeMap",
+  "type": "object",
+  "required": [
+    "source",
+    "total_score",
+    "criteria",
+    "unknowns"
+  ],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "total_score": {
+      "type": [
+        "number",
+        "string"
+      ]
+    },
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "criterion_id",
+          "name",
+          "weight",
+          "required_elements"
+        ],
+        "properties": {
+          "criterion_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "weight": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ]
+          },
+          "section": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "required_elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "recommended_elements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "evidence_source": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "section_weights": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "unmapped_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

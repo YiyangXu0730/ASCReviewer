@@ -1,0 +1,125 @@
+{
+  "snapshot_id": "5",
+  "created_at": "2026-05-03T06:22:03.8917049+08:00",
+  "mission": "Continue ASCReview long-run build without reviewing the dissertation.",
+  "continuation_source": ".ascreview/context/CONTEXT_SNAPSHOT_5.md",
+  "run_plan": ".ascreview/runs/RUN_20260503_060720_plan.md",
+  "run_ledger": ".ascreview/runs/RUN_20260503_060720_ledger.md",
+  "counts": {
+    "sources": 56,
+    "provenance_rules": 49,
+    "distillation_rounds": 46,
+    "skills": 9,
+    "cycles_completed_in_this_continuation": 4
+  },
+  "files": [
+    {
+      "path": ".ascreview/context/CONTEXT_SNAPSHOT_5.md",
+      "status": "created",
+      "summary": "Continuation snapshot after source expansion, rule distillation, biomedical toy fixture creation, adversarial QC, and validation.",
+      "next_action": "Use as the continuation source for the next build run."
+    },
+    {
+      "path": ".ascreview/context/NEXT_PROMPT_TO_CONTINUE_5.md",
+      "status": "created",
+      "summary": "Prompt for the next ASCReview package-build continuation.",
+      "next_action": "Use in a future continuation session."
+    },
+    {
+      "path": "library/source_index.seed.json",
+      "status": "modified",
+      "summary": "Expanded source index from 44 to 56 sources with conservative reuse labels.",
+      "next_action": "Add more verified open-access modality-specific sources."
+    },
+    {
+      "path": "templates/source_index.seed.json",
+      "status": "modified",
+      "summary": "Synchronized with the library source index.",
+      "next_action": "Keep synchronized after future source changes."
+    },
+    {
+      "path": "library/provenance_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded provenance ledger from 40 to 49 rules.",
+      "next_action": "Keep future rules source-linked and adversarially reviewed."
+    },
+    {
+      "path": "patterns/methodology",
+      "status": "modified",
+      "summary": "Added diagnostic/intervention scope patterns and failure modes.",
+      "next_action": "Add design-routing examples when schema support is added."
+    },
+    {
+      "path": "patterns/results",
+      "status": "modified",
+      "summary": "Added high-dimensional plot traceability patterns and failure modes.",
+      "next_action": "Add modality-specific examples after corpus expansion."
+    },
+    {
+      "path": "patterns/discussion",
+      "status": "modified",
+      "summary": "Added pan-cancer generalization and enrichment-not-mechanism patterns.",
+      "next_action": "Refine with future validation-focused examples."
+    },
+    {
+      "path": "patterns/figures",
+      "status": "modified",
+      "summary": "Added embedding/spatial figure decode patterns and failure modes.",
+      "next_action": "Expand with real open-access figure/legend source patterns where reuse permits."
+    },
+    {
+      "path": "skills/*/SKILL.md",
+      "status": "modified",
+      "summary": "Updated methodology, results, discussion, figures, bioinformatics, and claim-strength skills; mirrored to .agents/skills.",
+      "next_action": "Keep root and mirrored skills synchronized."
+    },
+    {
+      "path": "examples/toy_biomed_genomics_pack/*",
+      "status": "created",
+      "summary": "Non-dissertation biomedical/genomics toy fixture for workflow regression testing.",
+      "next_action": "Use only as regression fixture, not source evidence or real scoring."
+    },
+    {
+      "path": "scripts/validate_ascreview_build.py",
+      "status": "modified",
+      "summary": "Validator now requires and checks the second toy dry-run findings file.",
+      "next_action": "Add JSON Schema validation for ledgers."
+    },
+    {
+      "path": "qc/distillation_round_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded adversarial rounds from 36 to 46.",
+      "next_action": "Continue only with useful rule or artifact changes."
+    },
+    {
+      "path": "qc/adversarial_qc_report.md",
+      "status": "modified",
+      "summary": "Updated accepted, rejected, narrowed, and unresolved QC decisions for new rules and toy fixture.",
+      "next_action": "Keep aligned with the distillation ledger."
+    }
+  ],
+  "validation": {
+    "latest_known_status": "passing",
+    "commands": [
+      "python scripts\\validate_pack.py",
+      "python scripts\\validate_ascreview_build.py"
+    ],
+    "outputs": [
+      "VALIDATION_OK",
+      "ASCREVIEW_VALIDATION_OK sources=56 provenance_rules=49 distillation_rounds=46 skills=9"
+    ]
+  },
+  "open_questions": [
+    "Modality-specific source modules are still needed for single-cell multiome, immune repertoire, long-read sequencing, DIA/DDA proteomics, phosphoproteomics, and imaging-based spatial methods.",
+    "Source/provenance ledgers still need JSON Schema validation.",
+    "Severity classification needs explicit categories for rubric failure, scientific validity risk, reporting completeness risk, reproducibility risk, policy-compliance risk, and draft-stage TODO.",
+    "Dissertation-specific review still requires the real draft, marking scheme, figure assets, source constraints, and target assessment context."
+  ],
+  "next_actions": [
+    "Add automated JSON Schema validation for source and provenance ledgers.",
+    "Expand verified open-access corpus coverage for modality-specific biomedical/genomics modules.",
+    "Add modality/study-design routing fields to templates or schemas.",
+    "Improve severity classification support.",
+    "Do not begin dissertation-specific specialization until explicitly requested with required materials."
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "transfer_status": "FINAL_TRANSFER_READY_WITH_EXTERNAL_RUN_EVIDENCE",
+  "transfer_mode": "zero_mutation_transfer_only",
+  "created_at": "2026-05-03T20:36:13.557955Z",
+  "canonical_folder": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview",
+  "canonical_zip": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+  "canonical_zip_sha256_expected": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+  "canonical_zip_sha256_actual": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+  "zip_members": 170,
+  "bad_paths": [],
+  "transfer_staging_folder": "C:\\Users\\xyydsb666\\Desktop\\ASCReview_FINAL_TRANSFER_EVIDENCE_HARVEST_20260504_043613",
+  "transfer_wrapper_zip": "C:\\Users\\xyydsb666\\Desktop\\ASCReview_FINAL_TRANSFER_EVIDENCE_HARVEST_20260504_043613.zip",
+  "transfer_wrapper_zip_sha256": "11769f9b36816413590158e14a5562c734c9de72bf1ee9051b57fd72afc45893",
+  "source_summary": {
+    "core_artifacts_source": "canonical_folder",
+    "run_evidence_source": "external_workspace",
+    "external_run_evidence_source": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305",
+    "stale_latest_index_used_as_final": false,
+    "canonical_zip_embedded_core_artifacts": [
+      {
+        "artifact": "FINAL_NAMING_CANONICALIZATION.md",
+        "found": true,
+        "source": "canonical_zip",
+        "zip_member": "ASCReview_FINAL_DELIVERY/FINAL_NAMING_CANONICALIZATION.md",
+        "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+        "extracted_to": "evidence_source_notes/zip_internal_extracted/ASCReview_FINAL_DELIVERY__FINAL_NAMING_CANONICALIZATION.md"
+      }
+    ]
+  },
+  "required_artifacts": [
+    {
+      "name": "ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+      "role": "canonical_final_zip",
+      "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md",
+      "role": "final_2h_iteration_report",
+      "sha256": "229b23386609356277fb78318069168c155a0ff4f125d99eec3462c01e28c3f4",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "FINAL_DELIVERY_MANIFEST.json",
+      "role": "final_delivery_manifest",
+      "sha256": "ffb7a017d5056b16225bdef7997e64baf5987e26ab800d646ee9d3778ee199d3",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "ARTIFACT_INDEX_final.json",
+      "role": "final_artifact_index",
+      "sha256": "77182516d3afcdb929860fa78d4b45b59c81ade63f85f807b359952be7cd6f84",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+      "role": "remediation_report",
+      "sha256": "43252625744bd049dc001ea0838cfa49c5913b0af11c99e586cc9dc2f8546157",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "FINAL_NAMING_CANONICALIZATION.md",
+      "role": "naming_canonicalization_report",
+      "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+      "status": "present_verified",
+      "source_type": "canonical_folder"
+    },
+    {
+      "name": "iteration_state.json",
+      "role": "2h_iteration_state",
+      "sha256": "27573912064c44485eca8f9210205d2340109bae81b3388900bb0a0ddfe1775f",
+      "status": "present_verified",
+      "source_type": "external_workspace"
+    },
+    {
+      "name": "cycle_ledger.jsonl",
+      "role": "2h_cycle_ledger",
+      "sha256": "2f99ef83f50cb07ebd6c41da5874b7d2c1b2505bb29edb51bdf14ab86ae68bed",
+      "status": "present_verified",
+      "source_type": "external_workspace"
+    },
+    {
+      "name": "command_transcript.md",
+      "role": "2h_command_transcript",
+      "sha256": "42800d76b89c210fd7311c4154ec6a135a54e038b92c5ec56b3183e3d3550c99",
+      "status": "present_verified",
+      "source_type": "external_workspace"
+    },
+    {
+      "name": "adversarial_audit_log.md",
+      "role": "2h_adversarial_audit_log",
+      "sha256": "75fbc0fdac3cd9034ae83af4e9123d328f9d0e51e2b6fdf30c2dce9edc885233",
+      "status": "present_verified",
+      "source_type": "external_workspace"
+    },
+    {
+      "name": "patch_log.md",
+      "role": "2h_patch_log",
+      "sha256": "ee07d55ba67d755523837a916b4f91b70fca1989b6e88a07520a912fa7bf29e5",
+      "status": "present_verified",
+      "source_type": "external_workspace"
+    }
+  ],
+  "explicit_non_actions": {
+    "reran_2h_loop": false,
+    "mutated_canonical_package": false,
+    "rebuilt_canonical_zip": false,
+    "modified_canonical_zip": false,
+    "performed_dissertation_review": false,
+    "inferred_marking_scheme": false,
+    "expanded_corpus": false,
+    "fabricated_teacher_rubric": false,
+    "added_new_sources": false
+  },
+  "self_hash_note": "Wrapper ZIP SHA256 cannot be embedded inside the already-created wrapper without changing the wrapper hash; final response records the wrapper SHA256."
+}

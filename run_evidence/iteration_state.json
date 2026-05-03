@@ -1,0 +1,12 @@
+{
+  "target_active_seconds": 7200,
+  "accumulated_active_seconds": 7200,
+  "cycle_count": 36,
+  "current_mode": "non_mutating_adversarial_audit",
+  "last_completed_cycle": 36,
+  "can_resume": true,
+  "blocker": null,
+  "started_at": "2026-05-03T17:05:22.781910Z",
+  "updated_at": "2026-05-03T19:05:23.036764Z",
+  "patches_applied": []
+}

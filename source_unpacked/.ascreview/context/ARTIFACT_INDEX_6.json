@@ -1,0 +1,96 @@
+{
+  "snapshot_id": "6",
+  "created_at": "2026-05-03T06:49:57.0871972+08:00",
+  "mission": "Continue ASCReview long-run build as a unified specialization-ready workflow without reviewing the dissertation.",
+  "continuation_source": ".ascreview/context/CONTEXT_SNAPSHOT_6.md",
+  "run_plan": ".ascreview/runs/RUN_20260503_062733_plan.md",
+  "run_ledger": ".ascreview/runs/RUN_20260503_062733_ledger.md",
+  "heartbeat_automation": "ascreview-auto-iteration-until-london-07-30",
+  "counts": {
+    "sources": 65,
+    "provenance_rules": 56,
+    "distillation_rounds": 54,
+    "skills": 9,
+    "cycles_completed_in_this_continuation": 9
+  },
+  "files": [
+    {
+      "path": "schemas/SpecializationInputContract.schema.json",
+      "status": "created",
+      "summary": "Schema for five-input specialization contract, permissions, routing, severity taxonomy, and missing-information requests.",
+      "next_action": "Use during every future real specialization session."
+    },
+    {
+      "path": "templates/SpecializationInputContract.template.json",
+      "status": "created",
+      "summary": "Template for draft/rubric/figures/source/context readiness and review permissions.",
+      "next_action": "Instantiate before any real draft review."
+    },
+    {
+      "path": "examples/toy_partial_specialization_pack/*",
+      "status": "created",
+      "summary": "Non-dissertation partial-input regression fixture with blocked review permissions.",
+      "next_action": "Use as regression coverage for missing-input triage."
+    },
+    {
+      "path": "library/source_index.seed.json",
+      "status": "modified",
+      "summary": "Expanded source index from 56 to 65 sources.",
+      "next_action": "Deepen modality-specific modules with verified sources."
+    },
+    {
+      "path": "library/provenance_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded provenance ledger from 49 to 56 rules.",
+      "next_action": "Keep future rules source-linked and adversarially audited."
+    },
+    {
+      "path": "qc/distillation_round_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded adversarial rounds from 46 to 54.",
+      "next_action": "Continue only where concrete changes or rejected rules result."
+    },
+    {
+      "path": "scripts/validate_ascreview_build.py",
+      "status": "modified",
+      "summary": "Validator now schema-checks core ledgers and toy artifacts, plus cross-references dry-run finding evidence/severity/rule IDs.",
+      "next_action": "Add negative self-tests."
+    },
+    {
+      "path": "ascreview/README_ASCReview.md",
+      "status": "modified",
+      "summary": "Documents specialization contract and severity taxonomy.",
+      "next_action": "Keep aligned with prompt/template changes."
+    },
+    {
+      "path": "ascreview/USAGE_GUIDE.md",
+      "status": "modified",
+      "summary": "Documents real-review input requirements, permissions, routing, severity, and hard stops.",
+      "next_action": "Update after future specialization-fixture work."
+    }
+  ],
+  "validation": {
+    "latest_known_status": "passing",
+    "commands": [
+      "python scripts\\validate_pack.py",
+      "python scripts\\validate_ascreview_build.py"
+    ],
+    "outputs": [
+      "VALIDATION_OK",
+      "ASCREVIEW_VALIDATION_OK sources=65 provenance_rules=56 distillation_rounds=54 skills=9"
+    ]
+  },
+  "open_questions": [
+    "Negative validator self-tests are still missing.",
+    "Revision-round and figure-asset gating fixtures are still missing.",
+    "Modality-specific source modules need deeper verified examples before threshold-level rules are added.",
+    "Dissertation-specific review still requires explicit user start plus required materials."
+  ],
+  "next_actions": [
+    "Continue heartbeat-driven bounded cycles until London 07:30 or until a blocking condition occurs.",
+    "Add negative validator self-tests.",
+    "Add revision-round partial-input fixture.",
+    "Add figure-asset permission-gating fixture.",
+    "Do not begin dissertation-specific specialization in build mode."
+  ]
+}

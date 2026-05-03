@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview SpecializationInputContract",
+  "type": "object",
+  "required": [
+    "contract_id",
+    "status",
+    "required_inputs",
+    "review_permissions",
+    "routing_decisions",
+    "severity_taxonomy",
+    "missing_information_requests"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contract_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": ["not_started", "incomplete", "ready_for_non_scored_review", "ready_for_scored_review"]
+    },
+    "required_inputs": {
+      "type": "object",
+      "required": ["draft", "marking_scheme", "figures_assets", "source_constraints", "assessment_context"],
+      "additionalProperties": false,
+      "properties": {
+        "draft": {
+          "$ref": "#/$defs/input_record"
+        },
+        "marking_scheme": {
+          "$ref": "#/$defs/input_record"
+        },
+        "figures_assets": {
+          "$ref": "#/$defs/input_record"
+        },
+        "source_constraints": {
+          "$ref": "#/$defs/input_record"
+        },
+        "assessment_context": {
+          "$ref": "#/$defs/input_record"
+        }
+      }
+    },
+    "review_permissions": {
+      "type": "object",
+      "required": [
+        "can_review_draft_text",
+        "can_score_against_rubric",
+        "can_review_figures",
+        "can_make_domain_factual_claims",
+        "can_export_final_report"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "can_review_draft_text": {
+          "type": "boolean"
+        },
+        "can_score_against_rubric": {
+          "type": "boolean"
+        },
+        "can_review_figures": {
+          "type": "boolean"
+        },
+        "can_make_domain_factual_claims": {
+          "type": "boolean"
+        },
+        "can_export_final_report": {
+          "type": "boolean"
+        }
+      }
+    },
+    "routing_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["route_id", "route_type", "selected_value", "applies", "rationale", "evidence_basis", "confidence", "limitations"],
+        "additionalProperties": false,
+        "properties": {
+          "route_id": {
+            "type": "string"
+          },
+          "route_type": {
+            "enum": ["task_type", "study_design", "discipline", "modality", "reporting_guideline", "review_mode", "claim_evidence_level", "output_format"]
+          },
+          "selected_value": {
+            "type": "string"
+          },
+          "applies": {
+            "type": "boolean"
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence_basis": {
+            "enum": ["user_supplied", "teacher_rubric", "rubric_gate", "official_guideline", "source_pattern", "domain_expert_heuristic", "provisional"]
+          },
+          "confidence": {
+            "enum": ["low", "medium", "high"]
+          },
+          "limitations": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "severity_taxonomy": {
+      "type": "array",
+      "minItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["severity_id", "label", "definition", "allowed_when", "not_allowed_when"],
+        "additionalProperties": false,
+        "properties": {
+          "severity_id": {
+            "enum": [
+              "rubric_failure",
+              "scientific_validity_risk",
+              "reporting_completeness_risk",
+              "reproducibility_risk",
+              "policy_compliance_risk",
+              "draft_stage_todo",
+              "style_or_clarity_polish"
+            ]
+          },
+          "label": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "allowed_when": {
+            "type": "string"
+          },
+          "not_allowed_when": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "missing_information_requests": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["request_id", "input_key", "question", "blocks", "fallback_if_unavailable"],
+        "additionalProperties": false,
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "input_key": {
+            "enum": ["draft", "marking_scheme", "figures_assets", "source_constraints", "assessment_context"]
+          },
+          "question": {
+            "type": "string"
+          },
+          "blocks": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "draft_text_review",
+                "rubric_scoring",
+                "figure_review",
+                "domain_factual_review",
+                "final_report_export"
+              ]
+            }
+          },
+          "fallback_if_unavailable": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "input_record": {
+      "type": "object",
+      "required": ["status", "description", "accepted_formats", "paths_or_ids", "scope", "limitations"],
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": ["available", "missing", "not_applicable", "partial"]
+        },
+        "description": {
+          "type": "string"
+        },
+        "accepted_formats": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "paths_or_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": "string"
+        },
+        "limitations": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

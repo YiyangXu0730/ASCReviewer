@@ -1,0 +1,97 @@
+{
+  "source": "toy_biomed_genomics_marking_scheme",
+  "total_score": 50,
+  "criteria": [
+    {
+      "criterion_id": "TOY-BIO-C1",
+      "name": "Rationale and aim",
+      "weight": 8,
+      "section": "Introduction",
+      "required_elements": [
+        "focused biomedical rationale",
+        "clear data-analysis aim",
+        "scope of evidence stated"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_biomed_genomics_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-BIO-C2",
+      "name": "Bioinformatics reproducibility",
+      "weight": 16,
+      "section": "Methods",
+      "required_elements": [
+        "dataset accession or provenance",
+        "sample and cell counts",
+        "QC/filtering criteria",
+        "normalization and integration method",
+        "clustering and annotation method",
+        "pathway/enrichment method",
+        "software and versions"
+      ],
+      "recommended_elements": [
+        "code or notebook availability"
+      ],
+      "evidence_source": "toy_biomed_genomics_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-BIO-C3",
+      "name": "Results discipline and traceability",
+      "weight": 12,
+      "section": "Results",
+      "required_elements": [
+        "claims trace to figures or data",
+        "embeddings and clusters are interpretable",
+        "enrichment results include background and correction",
+        "avoid unsupported mechanism"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_biomed_genomics_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-BIO-C4",
+      "name": "Discussion claim calibration",
+      "weight": 10,
+      "section": "Discussion",
+      "required_elements": [
+        "evidence level stated",
+        "limitations of public-data and single-cell/spatial inference",
+        "future validation proposed"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_biomed_genomics_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-BIO-C5",
+      "name": "Figure and legend provenance",
+      "weight": 4,
+      "section": "figures_legends",
+      "required_elements": [
+        "figure panels decoded",
+        "source data or analysis object identified",
+        "scales and labels defined"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_biomed_genomics_marking_scheme"
+    }
+  ],
+  "section_weights": [
+    {"section": "Introduction", "weight": 8},
+    {"section": "Methods", "weight": 16},
+    {"section": "Results", "weight": 12},
+    {"section": "Discussion", "weight": 10},
+    {"section": "figures_legends", "weight": 4}
+  ],
+  "unknowns": [
+    "Toy task has no real data accession.",
+    "Toy task has no real source pack.",
+    "Toy task has no figure image files.",
+    "Toy task has no code or notebook."
+  ],
+  "rules": [
+    "Use this only for workflow testing.",
+    "Do not generalize toy scoring criteria to real review tasks.",
+    "Do not treat the fictional dataset as corpus evidence."
+  ],
+  "unmapped_criteria": []
+}

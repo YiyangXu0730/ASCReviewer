@@ -1,0 +1,80 @@
+{
+  "report_id": "ASCREVIEW-TOY-FULL-DRYRUN-0001",
+  "target_section": "full_draft",
+  "rubric_score_estimate": "20-24 / 40",
+  "score_rationale": "Toy rubric supports limited formative scoring; strongest weaknesses are method clarity, numerical results, and claim calibration.",
+  "must_fix": [
+    {
+      "id": "TOY-MF-1",
+      "location": "Results",
+      "issue": "Causal proof claim from unreplicated qualitative observation.",
+      "evidence_tag": "source_pattern",
+      "rule_ids": ["CLAIMS-R1-EVIDENCE-CALIBRATION", "RESULTS-R1-EVIDENCE-BEFORE-INTERPRETATION"]
+    },
+    {
+      "id": "TOY-MF-2",
+      "location": "Methods/Results",
+      "issue": "No quantitative or raw data support the Results criterion.",
+      "evidence_tag": "teacher_rubric",
+      "rule_ids": ["RESULTS-R2-EXTRACTABLE-NUMBERS", "RESULTS-R4-UNDERLYING-DATA-TRACE"]
+    }
+  ],
+  "should_fix": [
+    {
+      "id": "TOY-SF-1",
+      "location": "Introduction",
+      "issue": "Background claim lacks source support.",
+      "evidence_tag": "provisional"
+    }
+  ],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "MarkingSchemeMap.toy_full.json",
+      "evidence_type": "teacher_rubric"
+    }
+  ],
+  "evidence_tags_used": [
+    "teacher_rubric",
+    "source_pattern",
+    "provisional"
+  ],
+  "claim_calibration": [
+    {
+      "claim": "This proves that light makes yeast grow faster.",
+      "support_level": "unsupported",
+      "recommended_calibration": "The light condition appeared more cloudy in this unreplicated qualitative observation."
+    }
+  ],
+  "data_method_traceability": [
+    {
+      "item": "raw data",
+      "status": "absent",
+      "needed_detail": "raw observations or quantitative growth readings"
+    }
+  ],
+  "figure_legend_provenance": [],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "Toy rubric only",
+      "note": "Do not generalize toy scoring criteria to real dissertation review."
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Factual yeast biology",
+      "reason": "No source pack",
+      "needed_to_resolve": "Domain sources"
+    }
+  ],
+  "draft_stage_caveats": [
+    "Early-draft status means raw-data and source-pack gaps are revision priorities, not final-submission judgments."
+  ],
+  "next_actions": [
+    "Add raw or quantitative data.",
+    "Rewrite overclaiming Results sentence.",
+    "Add domain sources before factual biology adjudication."
+  ]
+}

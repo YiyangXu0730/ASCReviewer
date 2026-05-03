@@ -1,0 +1,70 @@
+{
+  "task_id": "ASCREVIEW-TOY-PARTIAL-0001",
+  "task_type": "proposal_review",
+  "writing_target": "non-dissertation synthetic workflow-preparation fixture",
+  "degree_or_publication_context": "generic formative preparation",
+  "topic": "none",
+  "draft_stage": "unknown",
+  "target_venue_or_assessment": "toy fixture only",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [
+    "source policy",
+    "source index",
+    "partial assessment context"
+  ],
+  "missing_materials": [
+    "draft text",
+    "marking scheme",
+    "section weights",
+    "figure assets, if later requested",
+    "task-specific source constraints"
+  ],
+  "review_modes": [
+    "workflow_preparation_only"
+  ],
+  "specialization_gate": {
+    "status": "incomplete",
+    "can_review_draft": false,
+    "required_before_review": [
+      "draft",
+      "marking_scheme",
+      "assessment_context"
+    ]
+  },
+  "specialization_input_contract": {
+    "path": "SpecializationInputContract.toy_partial.json",
+    "status": "incomplete",
+    "required_input_keys": [
+      "draft",
+      "marking_scheme",
+      "figures_assets",
+      "source_constraints",
+      "assessment_context"
+    ]
+  },
+  "routing_decisions": [
+    {
+      "route_type": "review_mode",
+      "selected_value": "workflow_preparation_only",
+      "applies": true,
+      "rationale": "No draft or marking scheme is available.",
+      "confidence": "high"
+    }
+  ],
+  "severity_policy": {
+    "taxonomy_source": "SpecializationInputContract.toy_partial.json",
+    "allowed_severity_ids": [
+      "rubric_failure",
+      "scientific_validity_risk",
+      "reporting_completeness_risk",
+      "reproducibility_risk",
+      "policy_compliance_risk",
+      "draft_stage_todo",
+      "style_or_clarity_polish"
+    ]
+  },
+  "output_format": "missing_information_request_only"
+}

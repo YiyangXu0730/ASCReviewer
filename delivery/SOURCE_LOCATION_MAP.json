@@ -1,0 +1,101 @@
+{
+  "ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip": {
+    "artifact": "ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "transfer_path": "canonical_zip/ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md": {
+    "artifact": "ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md",
+    "transfer_path": "reports/ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md",
+    "sha256": "229b23386609356277fb78318069168c155a0ff4f125d99eec3462c01e28c3f4",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "FINAL_DELIVERY_MANIFEST.json": {
+    "artifact": "FINAL_DELIVERY_MANIFEST.json",
+    "transfer_path": "manifests/FINAL_DELIVERY_MANIFEST.json",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\FINAL_DELIVERY_MANIFEST.json",
+    "sha256": "ffb7a017d5056b16225bdef7997e64baf5987e26ab800d646ee9d3778ee199d3",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "ARTIFACT_INDEX_final.json": {
+    "artifact": "ARTIFACT_INDEX_final.json",
+    "transfer_path": "manifests/ARTIFACT_INDEX_final.json",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ARTIFACT_INDEX_final.json",
+    "sha256": "77182516d3afcdb929860fa78d4b45b59c81ade63f85f807b359952be7cd6f84",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md": {
+    "artifact": "ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+    "transfer_path": "reports/ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+    "sha256": "43252625744bd049dc001ea0838cfa49c5913b0af11c99e586cc9dc2f8546157",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "FINAL_NAMING_CANONICALIZATION.md": {
+    "artifact": "FINAL_NAMING_CANONICALIZATION.md",
+    "transfer_path": "reports/FINAL_NAMING_CANONICALIZATION.md",
+    "source_type": "canonical_folder",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\FINAL_NAMING_CANONICALIZATION.md",
+    "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "iteration_state.json": {
+    "artifact": "iteration_state.json",
+    "transfer_path": "run_evidence/iteration_state.json",
+    "source_type": "external_workspace",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305\\iteration_state.json",
+    "sha256": "27573912064c44485eca8f9210205d2340109bae81b3388900bb0a0ddfe1775f",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "cycle_ledger.jsonl": {
+    "artifact": "cycle_ledger.jsonl",
+    "transfer_path": "run_evidence/cycle_ledger.jsonl",
+    "source_type": "external_workspace",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305\\cycle_ledger.jsonl",
+    "sha256": "2f99ef83f50cb07ebd6c41da5874b7d2c1b2505bb29edb51bdf14ab86ae68bed",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "command_transcript.md": {
+    "artifact": "command_transcript.md",
+    "transfer_path": "run_evidence/command_transcript.md",
+    "source_type": "external_workspace",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305\\command_transcript.md",
+    "sha256": "42800d76b89c210fd7311c4154ec6a135a54e038b92c5ec56b3183e3d3550c99",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "adversarial_audit_log.md": {
+    "artifact": "adversarial_audit_log.md",
+    "transfer_path": "run_evidence/adversarial_audit_log.md",
+    "source_type": "external_workspace",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305\\adversarial_audit_log.md",
+    "sha256": "75fbc0fdac3cd9034ae83af4e9123d328f9d0e51e2b6fdf30c2dce9edc885233",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  },
+  "patch_log.md": {
+    "artifact": "patch_log.md",
+    "transfer_path": "run_evidence/patch_log.md",
+    "source_type": "external_workspace",
+    "source_path_or_zip_member": "C:\\Users\\xyydsb666\\Desktop\\通用工作流- 一之元，Plan Library\\ascreview_codex_longrun_build_pack_v1\\.ascreview\\runs\\FINAL_DELIVERY_2H_ITERATION_20260504_010305\\patch_log.md",
+    "sha256": "ee07d55ba67d755523837a916b4f91b70fca1989b6e88a07520a912fa7bf29e5",
+    "canonical_zip_embedded": false,
+    "accepted_for_external_verification": true
+  }
+}

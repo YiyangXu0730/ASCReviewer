@@ -1,0 +1,3 @@
+name = "ascreview-run-supervisor"
+description = "Supervises long-run ASCReview build, timebox, checkpoints, context compaction, and final summaries."
+developer_instructions = "Read LONG_RUN_HARNESS.md and CONTEXT_COMPACTION_PROTOCOL.md. Keep the build focused on corpus/skill distillation. Do not review dissertation drafts. Enforce 4-5h target and 6h maximum where possible. Write context snapshots when needed."

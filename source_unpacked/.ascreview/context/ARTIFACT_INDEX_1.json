@@ -1,0 +1,121 @@
+{
+  "snapshot_id": "CONTEXT_SNAPSHOT_1",
+  "created_at": "2026-05-02",
+  "mission": "Build ASCReview Core, Corpus Library, Distilled Skills, Adversarial QC Harness, templates, schemas, and prompts without reviewing the dissertation.",
+  "files": [
+    {
+      "path": "ascreview/README_ASCReview.md",
+      "status": "created",
+      "summary": "Overview, architecture, priority rules, specialization pack requirements, and non-goals.",
+      "next_action": "Keep as entrypoint; expand only after additional corpus rounds."
+    },
+    {
+      "path": "ascreview/ASCReview_CORE_PROMPT.md",
+      "status": "created",
+      "summary": "Core operating contract with specialization gate and stop conditions.",
+      "next_action": "Test against toy specialization session."
+    },
+    {
+      "path": "ascreview/ASCReview_SPECIALIZATION_PROMPT.md",
+      "status": "created",
+      "summary": "Prompt for compiling task-specific review environment before draft review.",
+      "next_action": "Add worked toy example in future round."
+    },
+    {
+      "path": "ascreview/ASCReview_SECTION_REVIEW_PROMPT.md",
+      "status": "created",
+      "summary": "Section review workflow after specialization.",
+      "next_action": "Test with non-dissertation sample."
+    },
+    {
+      "path": "ascreview/ASCReview_FULL_DRAFT_REVIEW_PROMPT.md",
+      "status": "created",
+      "summary": "Full-draft coherence and rubric-alignment review workflow.",
+      "next_action": "Add cross-section review toy case."
+    },
+    {
+      "path": "ascreview/ASCReview_REVISION_ROUND_PROMPT.md",
+      "status": "created",
+      "summary": "Revision comparison workflow.",
+      "next_action": "Test against toy previous-feedback pair."
+    },
+    {
+      "path": "ascreview/USAGE_GUIDE.md",
+      "status": "created",
+      "summary": "Build mode vs real review mode and required inputs.",
+      "next_action": "Add installation notes if needed."
+    },
+    {
+      "path": "library/source_policy.md",
+      "status": "created",
+      "summary": "Legal/reuse and evidence hierarchy policy.",
+      "next_action": "Review against future source expansion."
+    },
+    {
+      "path": "library/acquisition_plan.md",
+      "status": "created",
+      "summary": "Corpus acquisition workflow and expansion order.",
+      "next_action": "Continue source acquisition."
+    },
+    {
+      "path": "library/source_index.seed.json",
+      "status": "created",
+      "summary": "Seed source metadata with guidelines, reuse policy, and open access pattern sources.",
+      "next_action": "Add more verified corpus sources."
+    },
+    {
+      "path": "library/provenance_ledger.seed.json",
+      "status": "created",
+      "summary": "Seed distilled rules with evidence tags, source IDs, confidence, failure modes, and limitations.",
+      "next_action": "Add rules from additional corpus sources."
+    },
+    {
+      "path": "patterns/*",
+      "status": "modified",
+      "summary": "Introduction, Methodology, Results, Discussion, and Figure/Legend pattern/failure-mode libraries expanded.",
+      "next_action": "Add more source-derived examples."
+    },
+    {
+      "path": "skills/*/SKILL.md",
+      "status": "created",
+      "summary": "Nine installable ASCReview skills created.",
+      "next_action": "Optionally mirror into .agents/skills and test skill invocation."
+    },
+    {
+      "path": "qc/adversarial_qc_report.md",
+      "status": "created",
+      "summary": "Adversarial cycle summary, rejected/downgraded rules, unresolved disputes.",
+      "next_action": "Continue QC after additional corpus expansion."
+    },
+    {
+      "path": "qc/distillation_round_ledger.seed.json",
+      "status": "created",
+      "summary": "Machine-readable builder/auditor/arbiter cycle ledger.",
+      "next_action": "Validate against schema in future automation."
+    },
+    {
+      "path": "templates/*",
+      "status": "modified",
+      "summary": "Templates updated to include specialization gate, stop checks, evidence tags, confidence, and uncertainty.",
+      "next_action": "Use in toy specialization test."
+    },
+    {
+      "path": ".ascreview/run_ledger.md",
+      "status": "created",
+      "summary": "Long-run build ledger and checkpoint.",
+      "next_action": "Append future run checkpoints."
+    }
+  ],
+  "open_questions": [
+    "Which actual teacher marking scheme and section weights will future specialization use?",
+    "Which institution-specific dissertation structure requirements override article-style conventions?",
+    "Which study design applies to each future review task?",
+    "Should the richer skills be mirrored into .agents/skills for installation?"
+  ],
+  "next_actions": [
+    "Expand corpus with verified open access biomedical/cancer/genomics examples.",
+    "Add automated schema validation beyond JSON parsing.",
+    "Create non-dissertation toy specialization examples.",
+    "Continue adversarial distillation after each corpus expansion."
+  ]
+}

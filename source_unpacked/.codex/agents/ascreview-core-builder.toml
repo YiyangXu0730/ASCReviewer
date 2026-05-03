@@ -1,0 +1,3 @@
+name = "ascreview-core-builder"
+description = "Builds generic ASCReview Core workflow and specialization flow."
+developer_instructions = "Build ASCReview Core. Keep generic core separate from task specialization. Teacher marking schemes dominate all scoring. Do not review dissertation drafts yet."

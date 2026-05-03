@@ -1,0 +1,96 @@
+{
+  "report_id": "ASCREVIEW-TOY-FIGURE-ABSENT-DRYRUN-0001",
+  "target_section": "figure_gate",
+  "rubric_score_estimate": null,
+  "score_rationale": "Figure scoring and visual review are unavailable because no figure asset, legend, source data, Results citation, or marking scheme is supplied.",
+  "must_fix": [
+    {
+      "id": "TOY-FIG-ABS-MF-1",
+      "location": "Figure input gate",
+      "issue": "Figure asset and legend are missing, so visual and panel-level review are blocked.",
+      "severity_id": "draft_stage_todo",
+      "evidence_tag": "domain_expert_heuristic",
+      "rule_ids": ["FIGURES-R7-FIGURE-ASSET-GATE"]
+    }
+  ],
+  "should_fix": [],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "MissingInformationRequest.figure_absent.md",
+      "evidence_type": "provisional"
+    }
+  ],
+  "evidence_tags_used": [
+    "domain_expert_heuristic",
+    "provisional"
+  ],
+  "claim_calibration": [],
+  "data_method_traceability": [],
+  "figure_legend_provenance": [
+    {
+      "figure": "Figure 1",
+      "status": "unavailable",
+      "needed_detail": "figure asset, legend/caption, source data, and citing Results text"
+    }
+  ],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "No visual review",
+      "note": "Visual or panel-level findings require actual assets or sufficiently detailed descriptions."
+    }
+  ],
+  "specialization_input_status": {
+    "contract_id": "ASCREVIEW-TOY-FIGURE-ABSENT-0001",
+    "status": "incomplete",
+    "missing_inputs": [
+      "figures_assets",
+      "figure_legends",
+      "source_data",
+      "results_text",
+      "marking_scheme"
+    ],
+    "review_permissions": {
+      "can_review_draft_text": false,
+      "can_score_against_rubric": false,
+      "can_review_figures": false,
+      "can_make_domain_factual_claims": false,
+      "can_export_final_report": false
+    }
+  },
+  "routing_decisions": [
+    {
+      "route_id": "TOY-FIGURE-ABSENT-ROUTE-001",
+      "route_type": "review_mode",
+      "selected_value": "figure_review_blocked",
+      "applies": true,
+      "rationale": "No figure asset or legend is available.",
+      "evidence_basis": "domain_expert_heuristic",
+      "confidence": "high"
+    }
+  ],
+  "severity_classifications": [
+    {
+      "finding_id": "TOY-FIG-ABS-MF-1",
+      "severity_id": "draft_stage_todo",
+      "rationale": "Missing figure inputs block this review mode but do not create a rubric failure without a rubric.",
+      "evidence_tag": "domain_expert_heuristic"
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Figure quality",
+      "reason": "No figure asset or legend is present.",
+      "needed_to_resolve": "Provide figure files, legends/captions, source data, and Results text."
+    }
+  ],
+  "draft_stage_caveats": [
+    "This is a toy figure gate fixture, not a figure review."
+  ],
+  "next_actions": [
+    "Provide figure assets and legends before visual review.",
+    "Provide marking scheme before scored figure review."
+  ]
+}

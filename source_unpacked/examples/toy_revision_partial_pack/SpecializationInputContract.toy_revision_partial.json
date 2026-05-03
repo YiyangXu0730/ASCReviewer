@@ -1,0 +1,132 @@
+{
+  "contract_id": "ASCREVIEW-TOY-REVISION-CONTRACT-0001",
+  "status": "incomplete",
+  "required_inputs": {
+    "draft": {
+      "status": "partial",
+      "description": "The fixture names a revision-round task but supplies no revised draft or previous draft.",
+      "accepted_formats": ["docx", "pdf", "markdown", "plain_text", "structured_sections"],
+      "paths_or_ids": [],
+      "scope": "Revision comparison is blocked.",
+      "limitations": "ASCReview can only request revised draft, previous draft, and prior feedback."
+    },
+    "marking_scheme": {
+      "status": "missing",
+      "description": "No marking scheme, prior score, or grade descriptors are supplied.",
+      "accepted_formats": ["docx", "pdf", "markdown", "plain_text", "image", "structured_json"],
+      "paths_or_ids": [],
+      "scope": "Score movement is blocked.",
+      "limitations": "No score-change estimate may be generated."
+    },
+    "figures_assets": {
+      "status": "missing",
+      "description": "No revised figure files, legends, or source data are supplied.",
+      "accepted_formats": ["png", "jpg", "tiff", "pdf", "pptx", "docx", "xlsx", "csv", "markdown", "plain_text"],
+      "paths_or_ids": [],
+      "scope": "Revised figure review is blocked.",
+      "limitations": "Do not infer visual or panel-level changes."
+    },
+    "source_constraints": {
+      "status": "partial",
+      "description": "Generic source policy is available but no task-specific source constraints or changed citations are supplied.",
+      "accepted_formats": ["plain_text", "markdown", "docx", "pdf", "structured_json"],
+      "paths_or_ids": ["library/source_policy.md"],
+      "scope": "Source-policy planning is allowed.",
+      "limitations": "Changed factual claims cannot be adjudicated."
+    },
+    "assessment_context": {
+      "status": "partial",
+      "description": "The fixture is a generic revision-round preparation task.",
+      "accepted_formats": ["plain_text", "markdown", "docx", "pdf", "structured_json"],
+      "paths_or_ids": ["examples/toy_revision_partial_pack/README.md"],
+      "scope": "Revision-input triage is allowed.",
+      "limitations": "Resolution, score movement, and final report export remain blocked."
+    }
+  },
+  "review_permissions": {
+    "can_review_draft_text": false,
+    "can_score_against_rubric": false,
+    "can_review_figures": false,
+    "can_make_domain_factual_claims": false,
+    "can_export_final_report": false
+  },
+  "routing_decisions": [
+    {
+      "route_id": "TOY-REVISION-ROUTE-001",
+      "route_type": "review_mode",
+      "selected_value": "revision_round_input_triage",
+      "applies": true,
+      "rationale": "Revision-round comparison is requested in principle, but prior feedback and revised material are missing.",
+      "evidence_basis": "user_supplied",
+      "confidence": "high",
+      "limitations": "No resolution classification can be made."
+    }
+  ],
+  "severity_taxonomy": [
+    {
+      "severity_id": "rubric_failure",
+      "label": "Rubric failure",
+      "definition": "A problem likely to lose marks because it directly conflicts with an explicit marking criterion, required element, or assessment instruction.",
+      "allowed_when": "The marking scheme, assignment brief, or teacher feedback explicitly supports the priority.",
+      "not_allowed_when": "The issue is only a journal convention, style preference, or domain heuristic."
+    },
+    {
+      "severity_id": "scientific_validity_risk",
+      "label": "Scientific validity risk",
+      "definition": "A problem that could make the scientific claim, design, analysis, interpretation, or conclusion unreliable.",
+      "allowed_when": "The issue concerns evidence strength, design logic, method validity, statistical support, or claim overreach.",
+      "not_allowed_when": "The issue is merely incomplete formatting or optional polish."
+    },
+    {
+      "severity_id": "reporting_completeness_risk",
+      "label": "Reporting completeness risk",
+      "definition": "A missing detail prevents readers from understanding what was done, what was found, or how a claim is supported.",
+      "allowed_when": "A required method, result, figure, source, or context detail is absent or hard to trace.",
+      "not_allowed_when": "The detail is available elsewhere with a clear cross-reference."
+    },
+    {
+      "severity_id": "reproducibility_risk",
+      "label": "Reproducibility risk",
+      "definition": "A missing data, code, parameter, accession, version, workflow, or source-data detail limits independent verification or rerun.",
+      "allowed_when": "The task depends on reusable data, computational analysis, public repositories, or reproducible methods.",
+      "not_allowed_when": "Access restrictions are legitimate and clearly documented."
+    },
+    {
+      "severity_id": "policy_compliance_risk",
+      "label": "Policy compliance risk",
+      "definition": "A potential conflict with a journal, institutional, funder, reporting, ethics, or data-sharing requirement.",
+      "allowed_when": "The relevant policy or guideline is in scope and source-linked.",
+      "not_allowed_when": "The policy has not been selected by task type, venue, or study design."
+    },
+    {
+      "severity_id": "draft_stage_todo",
+      "label": "Draft-stage TODO",
+      "definition": "A known gap that is acceptable at the current draft stage but must be resolved before a later review or submission stage.",
+      "allowed_when": "The draft stage is early or formative and the missing item is not required immediately by the rubric.",
+      "not_allowed_when": "The issue blocks current scoring, validity, or required deliverables."
+    },
+    {
+      "severity_id": "style_or_clarity_polish",
+      "label": "Style or clarity polish",
+      "definition": "A wording, flow, formatting, or presentation improvement that does not drive scoring or scientific validity by itself.",
+      "allowed_when": "The issue improves readability without being a must-fix requirement.",
+      "not_allowed_when": "The unclear wording changes the meaning of a claim or hides a methods/results gap."
+    }
+  ],
+  "missing_information_requests": [
+    {
+      "request_id": "TOY-REVISION-MIR-001",
+      "input_key": "draft",
+      "question": "Provide the revised draft, previous draft or reviewed section, and prior feedback/report before revision comparison.",
+      "blocks": ["draft_text_review", "final_report_export"],
+      "fallback_if_unavailable": "Prepare only a revision input checklist."
+    },
+    {
+      "request_id": "TOY-REVISION-MIR-002",
+      "input_key": "marking_scheme",
+      "question": "Provide the prior score basis or marking scheme before score movement is estimated.",
+      "blocks": ["rubric_scoring"],
+      "fallback_if_unavailable": "Classify only non-scored revision readiness if other materials are supplied."
+    }
+  ]
+}

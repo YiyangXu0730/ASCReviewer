@@ -1,0 +1,25 @@
+{
+  "package_name": "ASCReview Codex Long-Run Build Pack",
+  "version": "v1",
+  "created_at": "2026-05-01T22:46:00.450766Z",
+  "purpose": "Build ASCReview Core + corpus/skill distillation harness in Codex",
+  "specialization_ready_inputs": [
+    "draft",
+    "marking_scheme",
+    "figures_assets",
+    "source_constraints",
+    "assessment_context"
+  ],
+  "specialization_contract_template": "templates/SpecializationInputContract.template.json",
+  "main_prompt": "CODEX_MASTER_RUN_PROMPT.md",
+  "do_not_review_dissertation_yet": true,
+  "target_duration_hours": "4-5",
+  "max_duration_hours": 6,
+  "required_roles": [
+    "LibraryBuilder-Distiller",
+    "AdversarialAuditor",
+    "Arbiter-Integrator",
+    "RunSupervisor"
+  ],
+  "primary_focus": "corpus and skill distillation"
+}

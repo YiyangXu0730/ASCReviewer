@@ -1,0 +1,32 @@
+{
+  "section": "full_draft",
+  "required_outputs": [
+    "section-level rubric map",
+    "bioinformatics reproducibility audit",
+    "Methods-to-Results trace",
+    "figure and legend provenance review",
+    "claim calibration flags",
+    "must-fix issues",
+    "draft-stage caveats",
+    "missing information notes"
+  ],
+  "rubric_mapping": [
+    "TOY-BIO-C1",
+    "TOY-BIO-C2",
+    "TOY-BIO-C3",
+    "TOY-BIO-C4",
+    "TOY-BIO-C5"
+  ],
+  "evidence_rules": [
+    "Toy rubric has highest priority inside this fixture only.",
+    "ASCReview source patterns may support workflow testing but cannot add toy scoring criteria.",
+    "Factual oncology comments must be provisional because no source pack is provided.",
+    "Repository, single-cell, spatial, pathway, and figure comments must cite rule IDs when used."
+  ],
+  "stop_conditions": [
+    "Stop if asked to generalize toy rubric to real dissertation review.",
+    "Stop if asked to adjudicate factual oncology without sources.",
+    "Stop if user-provided dissertation text is substituted into this toy fixture.",
+    "Stop if asked to infer missing accession, figure, data, or code details."
+  ]
+}

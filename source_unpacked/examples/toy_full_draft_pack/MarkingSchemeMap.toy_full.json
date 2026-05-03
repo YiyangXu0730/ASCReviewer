@@ -1,0 +1,90 @@
+{
+  "source": "toy_full_draft_marking_scheme",
+  "total_score": 40,
+  "criteria": [
+    {
+      "criterion_id": "TOY-FULL-C1",
+      "name": "Aim and rationale",
+      "weight": 8,
+      "section": "Introduction",
+      "required_elements": [
+        "clear background",
+        "specific gap or rationale",
+        "explicit aim"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_full_draft_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-FULL-C2",
+      "name": "Method clarity",
+      "weight": 10,
+      "section": "Methods",
+      "required_elements": [
+        "sample/group definitions",
+        "procedure summary",
+        "measurement method",
+        "analysis approach"
+      ],
+      "recommended_elements": [
+        "state limitations of toy design"
+      ],
+      "evidence_source": "toy_full_draft_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-FULL-C3",
+      "name": "Results discipline",
+      "weight": 10,
+      "section": "Results",
+      "required_elements": [
+        "numerical findings",
+        "avoid unsupported interpretation",
+        "match Methods"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_full_draft_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-FULL-C4",
+      "name": "Discussion calibration",
+      "weight": 8,
+      "section": "Discussion",
+      "required_elements": [
+        "answer aim",
+        "limitations",
+        "future work"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_full_draft_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-FULL-C5",
+      "name": "Coherence and clarity",
+      "weight": 4,
+      "section": "whole_draft",
+      "required_elements": [
+        "logical flow",
+        "consistent terminology"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_full_draft_marking_scheme"
+    }
+  ],
+  "section_weights": [
+    {"section": "Introduction", "weight": 8},
+    {"section": "Methods", "weight": 10},
+    {"section": "Results", "weight": 10},
+    {"section": "Discussion", "weight": 8},
+    {"section": "whole_draft", "weight": 4}
+  ],
+  "unknowns": [
+    "Toy task has no real domain source pack.",
+    "Toy task has no figures or raw data.",
+    "Toy task has no institution handbook."
+  ],
+  "rules": [
+    "Use this only for workflow testing.",
+    "Do not generalize toy scoring criteria to real review tasks."
+  ],
+  "unmapped_criteria": []
+}

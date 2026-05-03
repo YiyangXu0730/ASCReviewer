@@ -1,0 +1,142 @@
+{
+  "contract_id": "ASCREVIEW-SPECIALIZATION-CONTRACT-XXXX",
+  "status": "not_started",
+  "required_inputs": {
+    "draft": {
+      "status": "missing",
+      "description": "Draft text, thesis chapter, manuscript, proposal, or revision material to be reviewed.",
+      "accepted_formats": ["docx", "pdf", "markdown", "plain_text", "structured_sections"],
+      "paths_or_ids": [],
+      "scope": "No draft text review is allowed until this is available or the user explicitly requests non-draft planning only.",
+      "limitations": "Without draft text, ASCReview can only prepare the workflow and ask for missing information."
+    },
+    "marking_scheme": {
+      "status": "missing",
+      "description": "Teacher rubric, marking scheme, assignment brief, grade descriptors, section weights, or explicit assessment priorities.",
+      "accepted_formats": ["docx", "pdf", "markdown", "plain_text", "image", "structured_json"],
+      "paths_or_ids": [],
+      "scope": "Rubric scoring and must-fix priority require this input unless the user explicitly requests non-scored formative review.",
+      "limitations": "ASCReview must not invent criteria, weights, grade boundaries, or teacher-specific preferences."
+    },
+    "figures_assets": {
+      "status": "missing",
+      "description": "Figure files, tables, captions, legends, supplementary figures, and source-data references.",
+      "accepted_formats": ["png", "jpg", "tiff", "pdf", "pptx", "docx", "xlsx", "csv", "markdown", "plain_text"],
+      "paths_or_ids": [],
+      "scope": "Figure and legend review is provisional or unavailable without the actual figure assets or captions.",
+      "limitations": "Text-only figure mentions cannot justify visual-design or panel-readability findings."
+    },
+    "source_constraints": {
+      "status": "missing",
+      "description": "Required citations, allowed source databases, prohibited source types, institutional source rules, reuse limits, and factual-checking boundaries.",
+      "accepted_formats": ["plain_text", "markdown", "docx", "pdf", "structured_json"],
+      "paths_or_ids": [],
+      "scope": "Domain factual review must stay within supplied sources or explicitly verified open sources.",
+      "limitations": "Do not fabricate citations, identifiers, licensing terms, or factual evidence."
+    },
+    "assessment_context": {
+      "status": "missing",
+      "description": "Degree, module, university, target journal or venue, review purpose, draft stage, deadline, supervisor feedback, and expected output format.",
+      "accepted_formats": ["plain_text", "markdown", "docx", "pdf", "structured_json"],
+      "paths_or_ids": [],
+      "scope": "Review tone, severity, and deliverable format depend on this context.",
+      "limitations": "If absent, default to generic formative review and mark scoring as unavailable."
+    }
+  },
+  "review_permissions": {
+    "can_review_draft_text": false,
+    "can_score_against_rubric": false,
+    "can_review_figures": false,
+    "can_make_domain_factual_claims": false,
+    "can_export_final_report": false
+  },
+  "routing_decisions": [],
+  "severity_taxonomy": [
+    {
+      "severity_id": "rubric_failure",
+      "label": "Rubric failure",
+      "definition": "A problem likely to lose marks because it directly conflicts with an explicit marking criterion, required element, or assessment instruction.",
+      "allowed_when": "The marking scheme, assignment brief, or teacher feedback explicitly supports the priority.",
+      "not_allowed_when": "The issue is only a journal convention, style preference, or domain heuristic."
+    },
+    {
+      "severity_id": "scientific_validity_risk",
+      "label": "Scientific validity risk",
+      "definition": "A problem that could make the scientific claim, design, analysis, interpretation, or conclusion unreliable.",
+      "allowed_when": "The issue concerns evidence strength, design logic, method validity, statistical support, or claim overreach.",
+      "not_allowed_when": "The issue is merely incomplete formatting or optional polish."
+    },
+    {
+      "severity_id": "reporting_completeness_risk",
+      "label": "Reporting completeness risk",
+      "definition": "A missing detail prevents readers from understanding what was done, what was found, or how a claim is supported.",
+      "allowed_when": "A required method, result, figure, source, or context detail is absent or hard to trace.",
+      "not_allowed_when": "The detail is available elsewhere with a clear cross-reference."
+    },
+    {
+      "severity_id": "reproducibility_risk",
+      "label": "Reproducibility risk",
+      "definition": "A missing data, code, parameter, accession, version, workflow, or source-data detail limits independent verification or rerun.",
+      "allowed_when": "The task depends on reusable data, computational analysis, public repositories, or reproducible methods.",
+      "not_allowed_when": "Access restrictions are legitimate and clearly documented."
+    },
+    {
+      "severity_id": "policy_compliance_risk",
+      "label": "Policy compliance risk",
+      "definition": "A potential conflict with a journal, institutional, funder, reporting, ethics, or data-sharing requirement.",
+      "allowed_when": "The relevant policy or guideline is in scope and source-linked.",
+      "not_allowed_when": "The policy has not been selected by task type, venue, or study design."
+    },
+    {
+      "severity_id": "draft_stage_todo",
+      "label": "Draft-stage TODO",
+      "definition": "A known gap that is acceptable at the current draft stage but must be resolved before a later review or submission stage.",
+      "allowed_when": "The draft stage is early or formative and the missing item is not required immediately by the rubric.",
+      "not_allowed_when": "The issue blocks current scoring, validity, or required deliverables."
+    },
+    {
+      "severity_id": "style_or_clarity_polish",
+      "label": "Style or clarity polish",
+      "definition": "A wording, flow, formatting, or presentation improvement that does not drive scoring or scientific validity by itself.",
+      "allowed_when": "The issue improves readability without being a must-fix requirement.",
+      "not_allowed_when": "The unclear wording changes the meaning of a claim or hides a methods/results gap."
+    }
+  ],
+  "missing_information_requests": [
+    {
+      "request_id": "MIR-DRAFT-001",
+      "input_key": "draft",
+      "question": "Please provide the draft text or the specific sections to review when you want dissertation-specific review to begin.",
+      "blocks": ["draft_text_review", "final_report_export"],
+      "fallback_if_unavailable": "Prepare only a generic workflow or source/rubric mapping plan."
+    },
+    {
+      "request_id": "MIR-RUBRIC-001",
+      "input_key": "marking_scheme",
+      "question": "Please provide the marking scheme, assignment brief, section weights, or grade descriptors if scored review is required.",
+      "blocks": ["rubric_scoring"],
+      "fallback_if_unavailable": "Proceed only as non-scored formative review if the user explicitly permits it."
+    },
+    {
+      "request_id": "MIR-FIGURES-001",
+      "input_key": "figures_assets",
+      "question": "Please provide figure files, tables, captions, legends, or source-data links if figure review is required.",
+      "blocks": ["figure_review"],
+      "fallback_if_unavailable": "Review only text references to figures and mark visual findings unavailable."
+    },
+    {
+      "request_id": "MIR-SOURCES-001",
+      "input_key": "source_constraints",
+      "question": "Please provide required sources, allowed source boundaries, or citation constraints if factual/domain review is required.",
+      "blocks": ["domain_factual_review"],
+      "fallback_if_unavailable": "Use only verified open sources and label factual judgments provisional."
+    },
+    {
+      "request_id": "MIR-CONTEXT-001",
+      "input_key": "assessment_context",
+      "question": "Please provide the degree/module, target venue, draft stage, review purpose, deadline, and desired output format.",
+      "blocks": ["final_report_export"],
+      "fallback_if_unavailable": "Use generic formative-review defaults and record the uncertainty."
+    }
+  ]
+}

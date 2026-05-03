@@ -1,0 +1,66 @@
+{
+  "snapshot_id": "CONTEXT_SNAPSHOT_2",
+  "created_at": "2026-05-02",
+  "mission": "Continue ASCReview long-run build without reviewing the dissertation.",
+  "files": [
+    {
+      "path": ".agents/skills/*/SKILL.md",
+      "status": "modified",
+      "summary": "Nine enriched review skills were mirrored into the package's Codex-compatible skill layout.",
+      "next_action": "Use these for installation/testing if the target workflow reads .agents/skills."
+    },
+    {
+      "path": "scripts/validate_ascreview_build.py",
+      "status": "created",
+      "summary": "ASCReview-specific validation for deliverables, source/provenance references, adversarial round counts, and skill headings.",
+      "next_action": "Extend to full JSON Schema validation if jsonschema is available."
+    },
+    {
+      "path": "examples/toy_specialization_pack/README.md",
+      "status": "created",
+      "summary": "Explains safe non-dissertation toy specialization scenario.",
+      "next_action": "Use to test specialization prompt."
+    },
+    {
+      "path": "examples/toy_specialization_pack/ReviewTaskSpec.toy.json",
+      "status": "created",
+      "summary": "Toy task specification for formative Introduction review.",
+      "next_action": "Use only for workflow tests."
+    },
+    {
+      "path": "examples/toy_specialization_pack/MarkingSchemeMap.toy.json",
+      "status": "created",
+      "summary": "Artificial toy rubric with four Introduction criteria.",
+      "next_action": "Use for rubric alignment test."
+    },
+    {
+      "path": "examples/toy_specialization_pack/SectionReviewContract.introduction.toy.json",
+      "status": "created",
+      "summary": "Toy section contract that limits review scope and stop conditions.",
+      "next_action": "Use for section review prompt test."
+    },
+    {
+      "path": "examples/toy_specialization_pack/MissingInformationRequest.toy.md",
+      "status": "created",
+      "summary": "Documents what the toy pack cannot support.",
+      "next_action": "Keep as example of missing information discipline."
+    },
+    {
+      "path": ".ascreview/run_ledger.md",
+      "status": "modified",
+      "summary": "Appended checkpoint 2 and validation results.",
+      "next_action": "Append future long-run checkpoints."
+    }
+  ],
+  "open_questions": [
+    "Should future expansion prioritize cancer biology papers, genomics/bioinformatics methods papers, or dissertation-specific institution documents?",
+    "Is .agents/skills the preferred installation target for this workflow repository?",
+    "Should validator require jsonschema dependency or remain standard-library-only?"
+  ],
+  "next_actions": [
+    "Expand verified source corpus.",
+    "Distill additional source-pattern rules.",
+    "Run added adversarial QC rounds.",
+    "Create non-dissertation full-draft toy fixture."
+  ]
+}

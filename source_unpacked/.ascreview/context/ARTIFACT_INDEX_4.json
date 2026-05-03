@@ -1,0 +1,96 @@
+{
+  "snapshot_id": "4",
+  "created_at": "2026-05-03T01:44:18.7121644+08:00",
+  "mission": "Continue ASCReview long-run build without reviewing the dissertation.",
+  "continuation_source": ".ascreview/context/CONTEXT_SNAPSHOT_3.md",
+  "run_plan": ".ascreview/runs/RUN_20260502_102849_plan.md",
+  "run_ledger": ".ascreview/runs/RUN_20260502_102849_ledger.md",
+  "counts": {
+    "sources": 44,
+    "provenance_rules": 40,
+    "distillation_rounds": 36,
+    "skills": 9,
+    "cycles_completed_in_this_continuation": 4
+  },
+  "files": [
+    {
+      "path": ".ascreview/context/CONTEXT_SNAPSHOT_4.md",
+      "status": "created",
+      "summary": "Continuation snapshot after source expansion, rule distillation, adversarial QC deepening, and toy workflow dry run.",
+      "next_action": "Use as the continuation source for the next build run."
+    },
+    {
+      "path": ".ascreview/context/NEXT_PROMPT_TO_CONTINUE_4.md",
+      "status": "created",
+      "summary": "Prompt for the next ASCReview package-build continuation.",
+      "next_action": "Use in a future continuation session."
+    },
+    {
+      "path": "library/source_index.seed.json",
+      "status": "modified",
+      "summary": "Expanded source index from 32 to 44 sources with conservative reuse labels.",
+      "next_action": "Add more verified open-access cancer/genomics examples."
+    },
+    {
+      "path": "library/provenance_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded provenance ledger from 30 to 40 rules with new routine-data, assay, repository, omics, claim, and revision traceability checks.",
+      "next_action": "Keep all future rules source-linked and adversarially reviewed."
+    },
+    {
+      "path": "qc/distillation_round_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded adversarial rounds from 26 to 36.",
+      "next_action": "Continue only with useful rule or artifact changes."
+    },
+    {
+      "path": "qc/adversarial_qc_report.md",
+      "status": "modified",
+      "summary": "Updated accepted, rejected, narrowed, and unresolved QC decisions.",
+      "next_action": "Keep aligned with the distillation ledger."
+    },
+    {
+      "path": "examples/toy_full_draft_pack/ASCReview_DryRunReport.toy_full.md",
+      "status": "created",
+      "summary": "Non-dissertation generic full-draft dry-run report.",
+      "next_action": "Use as a regression example."
+    },
+    {
+      "path": "examples/toy_full_draft_pack/ASCReview_DryRunFindings.toy_full.json",
+      "status": "created",
+      "summary": "Structured dry-run findings for the toy full draft.",
+      "next_action": "Keep validator checks aligned."
+    },
+    {
+      "path": "templates/*",
+      "status": "modified",
+      "summary": "Report templates now capture claim calibration, traceability, evidence tags, and revision drift.",
+      "next_action": "Exercise against another biomedical toy fixture."
+    },
+    {
+      "path": "schemas/ReviewReport.schema.json",
+      "status": "modified",
+      "summary": "Added claim_calibration, data_method_traceability, figure_legend_provenance, and policy_guideline_boundaries.",
+      "next_action": "Consider full jsonschema validation later."
+    },
+    {
+      "path": "scripts/validate_ascreview_build.py",
+      "status": "modified",
+      "summary": "Validator now checks toy dry-run artifacts, claim round coverage, source-template sync, and toy evidence tags.",
+      "next_action": "Extend toward schema-backed validation later."
+    }
+  ],
+  "validation": {
+    "latest_known_status_before_snapshot": "passing",
+    "commands": [
+      "python scripts\\validate_pack.py",
+      "python scripts\\validate_ascreview_build.py"
+    ],
+    "next_action": "Rerun after writing snapshot artifacts."
+  },
+  "next_actions": [
+    "Run final validation after this snapshot.",
+    "In the next run, prioritize verified open-access cancer/genomics examples and a second non-dissertation biomedical toy fixture.",
+    "Do not start dissertation-specific specialization until the user supplies the draft, marking scheme, figure assets, source constraints, and target assessment context."
+  ]
+}

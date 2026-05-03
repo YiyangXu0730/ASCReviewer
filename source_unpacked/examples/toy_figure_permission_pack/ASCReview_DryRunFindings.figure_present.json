@@ -1,0 +1,102 @@
+{
+  "report_id": "ASCREVIEW-TOY-FIGURE-PRESENT-DRYRUN-0001",
+  "target_section": "figure_gate",
+  "rubric_score_estimate": null,
+  "score_rationale": "Limited figure review is allowed because a toy figure asset and legend are present, but scoring is unavailable because no marking scheme is supplied.",
+  "must_fix": [],
+  "should_fix": [
+    {
+      "id": "TOY-FIG-PRE-SF-1",
+      "location": "Figure input gate",
+      "issue": "Source data and citing Results text are still absent, so source-data and figure-text consistency checks remain provisional.",
+      "severity_id": "reporting_completeness_risk",
+      "evidence_tag": "domain_expert_heuristic",
+      "rule_ids": ["FIGURES-R7-FIGURE-ASSET-GATE", "FIGURES-R2-RESOURCE-AND-DATA-LEGEND"]
+    }
+  ],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "toy_figure_asset.svg",
+      "evidence_type": "provisional"
+    },
+    {
+      "source": "toy_figure_legend.md",
+      "evidence_type": "provisional"
+    }
+  ],
+  "evidence_tags_used": [
+    "domain_expert_heuristic",
+    "provisional"
+  ],
+  "claim_calibration": [],
+  "data_method_traceability": [],
+  "figure_legend_provenance": [
+    {
+      "figure": "Figure 1",
+      "status": "partial",
+      "needed_detail": "source data and citing Results text"
+    }
+  ],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "No scored figure review",
+      "note": "No figure-related rubric criterion is supplied."
+    },
+    {
+      "boundary": "Toy asset only",
+      "note": "The SVG is a non-scientific regression fixture, not corpus evidence."
+    }
+  ],
+  "specialization_input_status": {
+    "contract_id": "ASCREVIEW-TOY-FIGURE-PRESENT-0001",
+    "status": "ready_for_non_scored_review",
+    "missing_inputs": [
+      "marking_scheme",
+      "source_data",
+      "results_text"
+    ],
+    "review_permissions": {
+      "can_review_draft_text": false,
+      "can_score_against_rubric": false,
+      "can_review_figures": true,
+      "can_make_domain_factual_claims": false,
+      "can_export_final_report": false
+    }
+  },
+  "routing_decisions": [
+    {
+      "route_id": "TOY-FIGURE-PRESENT-ROUTE-001",
+      "route_type": "review_mode",
+      "selected_value": "limited_non_scored_figure_review",
+      "applies": true,
+      "rationale": "A figure asset and legend are available, but source data, Results text, and rubric are absent.",
+      "evidence_basis": "domain_expert_heuristic",
+      "confidence": "high"
+    }
+  ],
+  "severity_classifications": [
+    {
+      "finding_id": "TOY-FIG-PRE-SF-1",
+      "severity_id": "reporting_completeness_risk",
+      "rationale": "Source data and Results text are needed to move from input-gate review to full figure-text/source-data review.",
+      "evidence_tag": "domain_expert_heuristic"
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Scientific figure interpretation",
+      "reason": "The toy figure has no scientific source data or Results text.",
+      "needed_to_resolve": "Use a real figure, legend, source data, and citing Results text in a real specialization session."
+    }
+  ],
+  "draft_stage_caveats": [
+    "This is a toy figure gate fixture, not a scientific figure review."
+  ],
+  "next_actions": [
+    "Provide source data and Results text before figure-text consistency review.",
+    "Provide figure-related rubric criteria before scoring."
+  ]
+}

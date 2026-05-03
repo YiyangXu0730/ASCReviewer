@@ -1,0 +1,120 @@
+{
+  "report_id": "ASCREVIEW-TOY-PARTIAL-DRYRUN-0001",
+  "target_section": "specialization_gate",
+  "rubric_score_estimate": null,
+  "score_rationale": "Scoring is unavailable because no marking scheme or draft is supplied.",
+  "must_fix": [
+    {
+      "id": "TOY-PARTIAL-MF-1",
+      "location": "Specialization input gate",
+      "issue": "Draft text is missing, so draft review and final report export are blocked.",
+      "severity_id": "draft_stage_todo",
+      "evidence_tag": "provisional",
+      "rule_ids": ["RUBRIC-R3-SPECIALIZATION-INPUT-GATE"]
+    },
+    {
+      "id": "TOY-PARTIAL-MF-2",
+      "location": "Specialization input gate",
+      "issue": "Marking scheme is missing, so rubric scoring and rubric-failure labels are blocked.",
+      "severity_id": "draft_stage_todo",
+      "evidence_tag": "provisional",
+      "rule_ids": ["RUBRIC-R1-RUBRIC-FIRST", "RUBRIC-R3-SPECIALIZATION-INPUT-GATE"]
+    }
+  ],
+  "should_fix": [
+    {
+      "id": "TOY-PARTIAL-SF-1",
+      "location": "Specialization input gate",
+      "issue": "Assessment context and source constraints are partial; future review should record target venue, draft stage, source boundaries, and output format.",
+      "severity_id": "reporting_completeness_risk",
+      "evidence_tag": "domain_expert_heuristic",
+      "rule_ids": ["RUBRIC-R3-SPECIALIZATION-INPUT-GATE"]
+    }
+  ],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "SpecializationInputContract.toy_partial.json",
+      "evidence_type": "provisional"
+    }
+  ],
+  "evidence_tags_used": [
+    "provisional",
+    "domain_expert_heuristic"
+  ],
+  "claim_calibration": [],
+  "data_method_traceability": [],
+  "figure_legend_provenance": [],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "No rubric scoring",
+      "note": "No rubric-failure severity may be assigned until a marking scheme or equivalent teacher instruction is supplied."
+    },
+    {
+      "boundary": "No draft review",
+      "note": "No textual finding may be generated because no draft text is present."
+    }
+  ],
+  "specialization_input_status": {
+    "contract_id": "ASCREVIEW-TOY-PARTIAL-CONTRACT-0001",
+    "status": "incomplete",
+    "missing_inputs": [
+      "draft",
+      "marking_scheme"
+    ],
+    "review_permissions": {
+      "can_review_draft_text": false,
+      "can_score_against_rubric": false,
+      "can_review_figures": false,
+      "can_make_domain_factual_claims": false,
+      "can_export_final_report": false
+    }
+  },
+  "routing_decisions": [
+    {
+      "route_id": "TOY-PARTIAL-ROUTE-001",
+      "route_type": "review_mode",
+      "selected_value": "workflow_preparation_only",
+      "applies": true,
+      "rationale": "No draft or marking scheme is available.",
+      "evidence_basis": "user_supplied",
+      "confidence": "high"
+    }
+  ],
+  "severity_classifications": [
+    {
+      "finding_id": "TOY-PARTIAL-MF-1",
+      "severity_id": "draft_stage_todo",
+      "rationale": "The missing draft blocks draft review and final report export but is not a rubric failure.",
+      "evidence_tag": "provisional"
+    },
+    {
+      "finding_id": "TOY-PARTIAL-MF-2",
+      "severity_id": "draft_stage_todo",
+      "rationale": "The missing marking scheme blocks scoring but does not authorize invented criteria.",
+      "evidence_tag": "provisional"
+    },
+    {
+      "finding_id": "TOY-PARTIAL-SF-1",
+      "severity_id": "reporting_completeness_risk",
+      "rationale": "Partial context would limit future review specificity until resolved.",
+      "evidence_tag": "domain_expert_heuristic"
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Real review scope",
+      "reason": "No real user draft, rubric, figures, source constraints, or assessment context are supplied.",
+      "needed_to_resolve": "Start a real specialization session with the required materials."
+    }
+  ],
+  "draft_stage_caveats": [
+    "This is a toy gate-level fixture, not a draft review."
+  ],
+  "next_actions": [
+    "Keep build-mode work separate from dissertation-specific review.",
+    "Use SpecializationInputContract.json first when a real specialization session starts."
+  ]
+}

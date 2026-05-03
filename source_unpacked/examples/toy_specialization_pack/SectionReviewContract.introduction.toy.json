@@ -1,0 +1,27 @@
+{
+  "section": "Introduction",
+  "required_outputs": [
+    "rubric-mapped comments",
+    "must-fix issues",
+    "should-fix issues",
+    "optional polish",
+    "gap/aim assessment",
+    "missing information notes"
+  ],
+  "rubric_mapping": [
+    "TOY-INTRO-C1",
+    "TOY-INTRO-C2",
+    "TOY-INTRO-C3",
+    "TOY-INTRO-C4"
+  ],
+  "evidence_rules": [
+    "Teacher toy rubric has highest priority.",
+    "ASCReview introduction patterns may support feedback but cannot add scoring criteria.",
+    "Domain factual claims must be marked provisional because no source pack is provided."
+  ],
+  "stop_conditions": [
+    "Stop if the user asks for full proposal scoring.",
+    "Stop if the user asks for factual biomedical accuracy adjudication without sources.",
+    "Stop if the task changes from toy review to the user's dissertation."
+  ]
+}

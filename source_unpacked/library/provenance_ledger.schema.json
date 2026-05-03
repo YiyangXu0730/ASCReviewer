@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview ProvenanceLedger",
+  "type": "object",
+  "required": ["rules"],
+  "additionalProperties": false,
+  "properties": {
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "rule_id",
+          "skill_id",
+          "rule",
+          "evidence_type",
+          "source_ids",
+          "confidence",
+          "failure_mode",
+          "limitations",
+          "audit_status"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "pattern": "^[A-Z]+-[A-Z0-9]+-[A-Z0-9-]+$"
+          },
+          "skill_id": {
+            "enum": [
+              "review-introduction",
+              "review-methodology",
+              "review-results",
+              "review-discussion",
+              "review-figures-legends",
+              "assess-rubric-alignment",
+              "assess-scientific-claim-strength",
+              "assess-bioinformatics-methods",
+              "revision-round-compare"
+            ]
+          },
+          "rule": {
+            "type": "string",
+            "minLength": 20
+          },
+          "evidence_type": {
+            "enum": ["source_pattern", "official_guideline", "teacher_rubric", "rubric_gate", "domain_expert_heuristic", "provisional"]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "confidence": {
+            "enum": ["low", "medium", "high"]
+          },
+          "failure_mode": {
+            "type": "string",
+            "minLength": 10
+          },
+          "limitations": {
+            "type": "string",
+            "minLength": 10
+          },
+          "audit_status": {
+            "enum": ["draft", "challenged", "accepted", "rejected", "provisional"]
+          }
+        }
+      }
+    }
+  }
+}

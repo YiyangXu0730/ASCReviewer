@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview LongRunState",
+  "type": "object",
+  "required": [
+    "run_id",
+    "phase",
+    "elapsed_time_minutes",
+    "current_focus",
+    "completed_artifacts",
+    "next_actions"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "elapsed_time_minutes": {
+      "type": "number"
+    },
+    "current_focus": {
+      "type": "string"
+    },
+    "completed_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_disputes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

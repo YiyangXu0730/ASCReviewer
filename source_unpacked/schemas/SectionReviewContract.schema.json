@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview SectionReviewContract",
+  "type": "object",
+  "required": [
+    "section",
+    "required_outputs",
+    "rubric_mapping",
+    "evidence_rules"
+  ],
+  "properties": {
+    "section": {
+      "type": "string"
+    },
+    "required_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rubric_mapping": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "stop_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "snapshot_id": "final",
+  "created_at": "2026-05-03T16:22:45.507459Z",
+  "project_canonical_name": "ASCReview",
+  "delivery_status": "FINAL_DELIVERY_READY",
+  "mission": "Final ASCReview delivery remediation complete without dissertation review.",
+  "continuation_source": "not_applicable_final_delivery",
+  "source_package_root": "C:\\Users\\xyydsb666\\Desktop\\\u901a\u7528\u5de5\u4f5c\u6d41- \u4e00\u4e4b\u5143\uff0cPlan Library\\ascreview_codex_longrun_build_pack_v1",
+  "final_delivery_folder": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview",
+  "canonical_zip": {
+    "path": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "filename": "ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "root_name": "ASCReview_FINAL_DELIVERY",
+    "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+    "size_bytes": 325624,
+    "posix_portable": true
+  },
+  "counts": {
+    "sources": 65,
+    "provenance_rules": 58,
+    "distillation_rounds": 58,
+    "skills": 9
+  },
+  "validation": {
+    "latest_known_status": "passing",
+    "commands": [
+      {
+        "command": "python scripts/validate_pack.py",
+        "expected_output": "VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_ascreview_build.py",
+        "expected_output": "ASCREVIEW_VALIDATION_OK sources=65 provenance_rules=58 distillation_rounds=58 skills=9"
+      },
+      {
+        "command": "python scripts/validate_negative_cases.py",
+        "expected_output": "NEGATIVE_VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_final_delivery.py",
+        "expected_output": "FINAL_DELIVERY_VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_final_delivery_negative_cases.py",
+        "expected_output": "FINAL_DELIVERY_NEGATIVE_VALIDATION_OK"
+      }
+    ],
+    "outputs": [
+      "VALIDATION_OK",
+      "ASCREVIEW_VALIDATION_OK sources=65 provenance_rules=58 distillation_rounds=58 skills=9",
+      "NEGATIVE_VALIDATION_OK",
+      "FINAL_DELIVERY_VALIDATION_OK artifacts_checked=8 index_artifacts_checked=8 baseline_validators=3",
+      "FINAL_DELIVERY_NEGATIVE_VALIDATION_OK"
+    ]
+  },
+  "canonical_artifacts": [
+    {
+      "role": "final_delivery_manifest",
+      "path": "FINAL_DELIVERY_MANIFEST.json",
+      "sha256": "ffb7a017d5056b16225bdef7997e64baf5987e26ab800d646ee9d3778ee199d3",
+      "size_bytes": 5601,
+      "notes": "Final delivery manifest, delivered outside the canonical ZIP to avoid self-reference."
+    },
+    {
+      "role": "canonical_zip",
+      "path": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+      "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+      "size_bytes": 325624,
+      "notes": "POSIX-portable canonical final delivery ZIP."
+    },
+    {
+      "role": "final_long_run_report",
+      "path": ".ascreview/reports/ASCReview_FINAL_LONG_RUN_REPORT.md",
+      "sha256": "3d5cfe8fc8f77f9a519ed065532ae55a367da81adae176bf84b79fa81fd000ea",
+      "size_bytes": 11390,
+      "notes": "Long-run build report."
+    },
+    {
+      "role": "remediation_report",
+      "path": "ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+      "sha256": "43252625744bd049dc001ea0838cfa49c5913b0af11c99e586cc9dc2f8546157",
+      "size_bytes": 3539,
+      "notes": "Post-QC final delivery remediation report."
+    },
+    {
+      "role": "validation_transcript",
+      "path": ".ascreview/runs/FINAL_DELIVERY_REMEDIATION_20260504_001345/validation_transcript.md",
+      "sha256": "f4c538d604d2e48909b2be642be4cdc4136e476ac9e11404007908a9d6e3465a",
+      "size_bytes": 1601,
+      "notes": "Exact final validation command outputs."
+    },
+    {
+      "role": "diff_summary",
+      "path": ".ascreview/runs/FINAL_DELIVERY_REMEDIATION_20260504_001345/diff_summary.md",
+      "sha256": "0d5dbe42e1249b5d05c919888646ef460cee1baddd31491449e4c09374aa9bdb",
+      "size_bytes": 1622,
+      "notes": "Created and modified file summary."
+    },
+    {
+      "role": "blockers",
+      "path": ".ascreview/runs/FINAL_DELIVERY_REMEDIATION_20260504_001345/blockers.md",
+      "sha256": "90b68466271eb0f6757c0e9d7807b61f717f8f4b6fe6316994318cf5771b78aa",
+      "size_bytes": 196,
+      "notes": "Final blocker log."
+    },
+    {
+      "role": "naming_canonicalization_note",
+      "path": "FINAL_NAMING_CANONICALIZATION.md",
+      "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+      "size_bytes": 667,
+      "notes": "Canonical naming note."
+    }
+  ],
+  "self_reference_note": "This index intentionally omits its own hash because hashing the file inside itself would be circular.",
+  "scope_confirmation": {
+    "dissertation_review_performed": false,
+    "teacher_specific_scoring_created": false,
+    "corpus_expansion_performed_in_remediation": false,
+    "dissertation_specialization_started": false
+  }
+}

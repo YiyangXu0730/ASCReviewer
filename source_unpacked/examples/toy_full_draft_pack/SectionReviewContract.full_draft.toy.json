@@ -1,0 +1,29 @@
+{
+  "section": "full_draft",
+  "required_outputs": [
+    "section-level rubric map",
+    "cross-section coherence notes",
+    "Methods-to-Results trace",
+    "claim calibration flags",
+    "must-fix issues",
+    "draft-stage caveats",
+    "missing information notes"
+  ],
+  "rubric_mapping": [
+    "TOY-FULL-C1",
+    "TOY-FULL-C2",
+    "TOY-FULL-C3",
+    "TOY-FULL-C4",
+    "TOY-FULL-C5"
+  ],
+  "evidence_rules": [
+    "Toy rubric has highest priority inside this fixture only.",
+    "ASCReview source patterns may support workflow testing but cannot add toy scoring criteria.",
+    "Factual biology comments must be provisional because no source pack is provided."
+  ],
+  "stop_conditions": [
+    "Stop if asked to generalize toy rubric to real dissertation review.",
+    "Stop if asked to adjudicate factual biology without sources.",
+    "Stop if user-provided dissertation text is substituted into this toy fixture."
+  ]
+}

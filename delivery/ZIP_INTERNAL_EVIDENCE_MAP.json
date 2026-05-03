@@ -1,0 +1,70 @@
+[
+  {
+    "artifact": "ARTIFACT_INDEX_final.json",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "FINAL_DELIVERY_MANIFEST.json",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "ASCReview_FINAL_DELIVERY_2H_ITERATION_REPORT.md",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "ASCReview_FINAL_DELIVERY_REMEDIATION_REPORT.md",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "FINAL_NAMING_CANONICALIZATION.md",
+    "found": true,
+    "source": "canonical_zip",
+    "zip_member": "ASCReview_FINAL_DELIVERY/FINAL_NAMING_CANONICALIZATION.md",
+    "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+    "extracted_to": "evidence_source_notes/zip_internal_extracted/ASCReview_FINAL_DELIVERY__FINAL_NAMING_CANONICALIZATION.md"
+  },
+  {
+    "artifact": "FINAL_DELIVERY_2H_ITERATION",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "iteration_state.json",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "cycle_ledger.jsonl",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "command_transcript.md",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "adversarial_audit_log.md",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  },
+  {
+    "artifact": "patch_log.md",
+    "found": false,
+    "source": null,
+    "status": "missing_from_canonical_zip"
+  }
+]

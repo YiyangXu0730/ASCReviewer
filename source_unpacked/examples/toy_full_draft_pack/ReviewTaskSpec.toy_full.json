@@ -1,0 +1,38 @@
+{
+  "task_id": "ASCREVIEW-TOY-FULL-0001",
+  "task_type": "article_review",
+  "writing_target": "toy full draft",
+  "degree_or_publication_context": "formative undergraduate lab-report exercise",
+  "topic": "fictional yeast light-exposure growth experiment",
+  "draft_stage": "early_draft",
+  "target_venue_or_assessment": "toy formative rubric",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [
+    "toy full-draft marking scheme",
+    "toy draft text",
+    "section contract"
+  ],
+  "missing_materials": [
+    "real domain source pack",
+    "raw data",
+    "figures",
+    "teacher handbook"
+  ],
+  "review_modes": [
+    "full_draft_review"
+  ],
+  "output_format": "markdown_report",
+  "specialization_gate": {
+    "status": "toy_partial",
+    "can_review_draft": true,
+    "scope_limit": "workflow test only; no factual biology adjudication and no real grading authority",
+    "required_before_review": [
+      "ReviewTaskSpec.toy_full.json",
+      "MarkingSchemeMap.toy_full.json",
+      "SectionReviewContract.full_draft.toy.json"
+    ]
+  }
+}

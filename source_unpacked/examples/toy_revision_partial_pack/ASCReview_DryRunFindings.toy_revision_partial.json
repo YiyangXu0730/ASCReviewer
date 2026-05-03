@@ -1,0 +1,108 @@
+{
+  "report_id": "ASCREVIEW-TOY-REVISION-PARTIAL-DRYRUN-0001",
+  "target_section": "revision_gate",
+  "rubric_score_estimate": null,
+  "score_rationale": "Score movement is unavailable because no marking scheme, prior score basis, prior feedback, or revised draft is supplied.",
+  "must_fix": [
+    {
+      "id": "TOY-REV-MF-1",
+      "location": "Revision input gate",
+      "issue": "Prior feedback/report and revised draft are missing, so issue-resolution classification is blocked.",
+      "severity_id": "draft_stage_todo",
+      "evidence_tag": "domain_expert_heuristic",
+      "rule_ids": ["REVISION-R1-RESOLUTION-EVIDENCE", "REVISION-R4-REVISION-INPUT-GATE"]
+    },
+    {
+      "id": "TOY-REV-MF-2",
+      "location": "Revision input gate",
+      "issue": "Prior score basis and marking scheme are missing, so score movement is blocked.",
+      "severity_id": "draft_stage_todo",
+      "evidence_tag": "provisional",
+      "rule_ids": ["RUBRIC-R1-RUBRIC-FIRST", "REVISION-R4-REVISION-INPUT-GATE"]
+    }
+  ],
+  "should_fix": [],
+  "optional_polish": [],
+  "paragraph_comments": [],
+  "sentence_level_comments": [],
+  "evidence_links": [
+    {
+      "source": "SpecializationInputContract.toy_revision_partial.json",
+      "evidence_type": "provisional"
+    }
+  ],
+  "evidence_tags_used": [
+    "domain_expert_heuristic",
+    "provisional"
+  ],
+  "claim_calibration": [],
+  "data_method_traceability": [],
+  "figure_legend_provenance": [],
+  "policy_guideline_boundaries": [
+    {
+      "boundary": "No resolution classification",
+      "note": "Resolution requires prior issue record plus revised evidence."
+    },
+    {
+      "boundary": "No score movement",
+      "note": "Score movement requires rubric and prior score basis."
+    }
+  ],
+  "specialization_input_status": {
+    "contract_id": "ASCREVIEW-TOY-REVISION-CONTRACT-0001",
+    "status": "incomplete",
+    "missing_inputs": [
+      "revised_draft",
+      "previous_draft_or_reviewed_section",
+      "prior_feedback_or_report",
+      "prior_score_basis",
+      "marking_scheme"
+    ],
+    "review_permissions": {
+      "can_review_draft_text": false,
+      "can_score_against_rubric": false,
+      "can_review_figures": false,
+      "can_make_domain_factual_claims": false,
+      "can_export_final_report": false
+    }
+  },
+  "routing_decisions": [
+    {
+      "route_id": "TOY-REVISION-ROUTE-001",
+      "route_type": "review_mode",
+      "selected_value": "revision_round_input_triage",
+      "applies": true,
+      "rationale": "Prior feedback and revised draft are missing.",
+      "evidence_basis": "user_supplied",
+      "confidence": "high"
+    }
+  ],
+  "severity_classifications": [
+    {
+      "finding_id": "TOY-REV-MF-1",
+      "severity_id": "draft_stage_todo",
+      "rationale": "The missing revision materials block comparison but are not themselves rubric failures.",
+      "evidence_tag": "domain_expert_heuristic"
+    },
+    {
+      "finding_id": "TOY-REV-MF-2",
+      "severity_id": "draft_stage_todo",
+      "rationale": "The missing rubric and prior score basis block score movement.",
+      "evidence_tag": "provisional"
+    }
+  ],
+  "uncertainty": [
+    {
+      "issue": "Revision status",
+      "reason": "No prior issue record or revised draft is available.",
+      "needed_to_resolve": "Provide prior feedback/report and revised draft."
+    }
+  ],
+  "draft_stage_caveats": [
+    "This is a toy revision input-gate fixture, not a revision review."
+  ],
+  "next_actions": [
+    "Provide revised draft and prior feedback before revision comparison.",
+    "Provide rubric and prior score basis before score movement is discussed."
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "manifest_id": "FINAL_DELIVERY_MANIFEST_20260504_001345",
+  "created_at": "2026-05-03T16:22:45.478614Z",
+  "project_canonical_name": "ASCReview",
+  "delivery_status": "FINAL_DELIVERY_READY",
+  "source_package_root": "C:\\Users\\xyydsb666\\Desktop\\\u901a\u7528\u5de5\u4f5c\u6d41- \u4e00\u4e4b\u5143\uff0cPlan Library\\ascreview_codex_longrun_build_pack_v1",
+  "final_delivery_folder": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview",
+  "canonical_zip": {
+    "path": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "filename": "ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+    "root_name": "ASCReview_FINAL_DELIVERY",
+    "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+    "size_bytes": 325624,
+    "posix_portable": true
+  },
+  "artifacts": [
+    {
+      "role": "canonical_zip",
+      "path": "C:\\Users\\xyydsb666\\Desktop\\The Final ASCReview\\ASCREVIEW_FINAL_DELIVERY_PORTABLE_POSIX_20260504_001345.zip",
+      "sha256": "45f06e6557945f3b01b0a1a5cc8dc9b151506ae93faa7d1c87737967449fa4c8",
+      "size_bytes": 325624,
+      "notes": "POSIX-portable canonical final delivery ZIP; final delivery metadata is delivered beside the ZIP to avoid self-referential hashing."
+    },
+    {
+      "role": "final_long_run_report",
+      "path": ".ascreview/reports/ASCReview_FINAL_LONG_RUN_REPORT.md",
+      "sha256": "3d5cfe8fc8f77f9a519ed065532ae55a367da81adae176bf84b79fa81fd000ea",
+      "size_bytes": 11390,
+      "notes": "Long-run build report generated before remediation."
+    },
+    {
+      "role": "provenance_ledger",
+      "path": "library/provenance_ledger.seed.json",
+      "sha256": "dcad2a750d32a5392d97e5246502525b605cafcfb275d3536f8517f979675af7",
+      "size_bytes": 50886,
+      "notes": "Provenance ledger with RUBRIC-R1 marked as rubric_gate, not teacher_rubric."
+    },
+    {
+      "role": "final_delivery_manifest_schema",
+      "path": "schemas/FinalDeliveryManifest.schema.json",
+      "sha256": "a5ab130583fd782c8e8ac0ab0845091ca6af496bac556bc7a56e0ee29ec08b84",
+      "size_bytes": 3750,
+      "notes": "Schema for final delivery manifest structure."
+    },
+    {
+      "role": "posix_repack_script",
+      "path": "scripts/repack_posix_zip.py",
+      "sha256": "d591f12a6571cb3fda014fe5a3bdf1dc52c96fc38c4a79f16024af3cd5b9fd82",
+      "size_bytes": 4125,
+      "notes": "Deterministic POSIX ZIP repacker."
+    },
+    {
+      "role": "final_delivery_validator",
+      "path": "scripts/validate_final_delivery.py",
+      "sha256": "0b71a39e5348ec1b93c866ad929e42c0d8ba13c0a7e5c30568705ed601129232",
+      "size_bytes": 13709,
+      "notes": "Final delivery acceptance validator."
+    },
+    {
+      "role": "final_delivery_negative_validator",
+      "path": "scripts/validate_final_delivery_negative_cases.py",
+      "sha256": "fd29db190361cb2c306d057aa4df376a68ce091ff50d9b39167250aaff854bac",
+      "size_bytes": 5655,
+      "notes": "Negative-case validator for final delivery regressions."
+    },
+    {
+      "role": "naming_canonicalization_note",
+      "path": "FINAL_NAMING_CANONICALIZATION.md",
+      "sha256": "4f7cc8eb741427bc5871a944827392943ae117887fea23eff1d13e3676dddfda",
+      "size_bytes": 667,
+      "notes": "Canonical ASCReview naming note and historical alias record."
+    }
+  ],
+  "validation": {
+    "status": "passing",
+    "commands": [
+      {
+        "command": "python scripts/validate_pack.py",
+        "expected_output": "VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_ascreview_build.py",
+        "expected_output": "ASCREVIEW_VALIDATION_OK sources=65 provenance_rules=58 distillation_rounds=58 skills=9"
+      },
+      {
+        "command": "python scripts/validate_negative_cases.py",
+        "expected_output": "NEGATIVE_VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_final_delivery.py",
+        "expected_output": "FINAL_DELIVERY_VALIDATION_OK"
+      },
+      {
+        "command": "python scripts/validate_final_delivery_negative_cases.py",
+        "expected_output": "FINAL_DELIVERY_NEGATIVE_VALIDATION_OK"
+      }
+    ]
+  },
+  "provenance_hygiene": {
+    "teacher_rubric_present": false,
+    "rubric_gate_rule_id": "RUBRIC-R1-RUBRIC-FIRST",
+    "status": "RUBRIC-R1 is a generic input gate and must not create teacher-specific criteria or scores before a real rubric is supplied."
+  },
+  "naming": {
+    "canonical_name": "ASCReview",
+    "historical_aliases": [
+      "The Final ACS Review",
+      "THE FINAL ACS REVIEW.zip",
+      "AVS Review typo variant"
+    ],
+    "canonicalization_note": "New final-delivery artifacts use ASCReview/ASCREVIEW. Historical ACS/AVS aliases are retained only as archival references."
+  },
+  "limitations": [
+    "No dissertation draft was reviewed or scored in this remediation pass.",
+    "No marking scheme was supplied or inferred; teacher-specific scoring remains disabled until specialization.",
+    "No corpus expansion or source distillation was performed in this remediation pass.",
+    "Final manifest, final artifact index, remediation report, and remediation run records are delivered beside the canonical ZIP to avoid self-referential archive hashing."
+  ],
+  "scope_confirmation": {
+    "dissertation_review_performed": false,
+    "teacher_specific_scoring_created": false,
+    "corpus_expansion_performed_in_remediation": false,
+    "dissertation_specialization_started": false
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Toy figure asset for ASCReview permission gating</title>
+  <desc id="desc">A simple non-scientific placeholder chart used only to test whether figure review can be enabled when an asset exists.</desc>
+  <rect width="320" height="180" fill="#ffffff"/>
+  <line x1="48" y1="140" x2="280" y2="140" stroke="#333333" stroke-width="2"/>
+  <line x1="48" y1="140" x2="48" y2="28" stroke="#333333" stroke-width="2"/>
+  <rect x="80" y="92" width="42" height="48" fill="#4c78a8"/>
+  <rect x="148" y="70" width="42" height="70" fill="#f58518"/>
+  <rect x="216" y="48" width="42" height="92" fill="#54a24b"/>
+  <text x="160" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Toy groups</text>
+  <text x="18" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" transform="rotate(-90 18 84)">Toy value</text>
+</svg>

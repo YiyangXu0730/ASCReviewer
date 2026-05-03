@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview DistillationRoundLedger",
+  "type": "object",
+  "required": ["rounds"],
+  "additionalProperties": false,
+  "properties": {
+    "rounds": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "round_id",
+          "skill_family",
+          "builder_claims",
+          "auditor_objections",
+          "arbiter_decisions",
+          "rules_added",
+          "rules_modified",
+          "rules_rejected",
+          "unresolved_disputes",
+          "next_actions"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "round_id": {
+            "type": "string",
+            "pattern": "^[A-Z]+(?:-[A-Z0-9]+)+$"
+          },
+          "skill_family": {
+            "enum": [
+              "introduction",
+              "methodology",
+              "results",
+              "discussion",
+              "figures",
+              "rubric",
+              "revision",
+              "bioinformatics",
+              "claims",
+              "toy_fixture"
+            ]
+          },
+          "builder_claims": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["claim", "evidence_type", "source_ids"],
+              "additionalProperties": false,
+              "properties": {
+                "claim": {
+                  "type": "string",
+                  "minLength": 10
+                },
+                "evidence_type": {
+                  "enum": ["source_pattern", "official_guideline", "teacher_rubric", "rubric_gate", "domain_expert_heuristic", "provisional"]
+                },
+                "source_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "auditor_objections": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["severity", "objection", "required_patch"],
+              "additionalProperties": false,
+              "properties": {
+                "severity": {
+                  "enum": ["low", "medium", "high"]
+                },
+                "objection": {
+                  "type": "string",
+                  "minLength": 10
+                },
+                "required_patch": {
+                  "type": "string",
+                  "minLength": 5
+                }
+              }
+            }
+          },
+          "arbiter_decisions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["decision", "patch"],
+              "additionalProperties": false,
+              "properties": {
+                "decision": {
+                  "type": "string",
+                  "minLength": 3
+                },
+                "patch": {
+                  "type": "string",
+                  "minLength": 5
+                }
+              }
+            }
+          },
+          "rules_added": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rules_modified": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rules_rejected": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unresolved_disputes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "next_actions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

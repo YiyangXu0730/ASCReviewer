@@ -1,0 +1,63 @@
+{
+  "source": "toy_marking_scheme",
+  "total_score": 20,
+  "criteria": [
+    {
+      "criterion_id": "TOY-INTRO-C1",
+      "name": "Context and relevance",
+      "weight": 5,
+      "section": "Introduction",
+      "required_elements": [
+        "brief background",
+        "why the topic matters"
+      ],
+      "recommended_elements": [
+        "avoid excessive textbook detail"
+      ],
+      "evidence_source": "toy_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-INTRO-C2",
+      "name": "Knowledge gap and rationale",
+      "weight": 7,
+      "section": "Introduction",
+      "required_elements": [
+        "specific gap",
+        "rationale for the proposed work"
+      ],
+      "recommended_elements": [
+        "connect gap to proposed aim"
+      ],
+      "evidence_source": "toy_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-INTRO-C3",
+      "name": "Aim clarity",
+      "weight": 5,
+      "section": "Introduction",
+      "required_elements": [
+        "explicit aim or research question"
+      ],
+      "recommended_elements": [
+        "avoid reporting results"
+      ],
+      "evidence_source": "toy_marking_scheme"
+    },
+    {
+      "criterion_id": "TOY-INTRO-C4",
+      "name": "Writing clarity",
+      "weight": 3,
+      "section": "Introduction",
+      "required_elements": [
+        "logical paragraph flow",
+        "clear terminology"
+      ],
+      "recommended_elements": [],
+      "evidence_source": "toy_marking_scheme"
+    }
+  ],
+  "unknowns": [
+    "No real domain source pack is provided.",
+    "No full proposal requirements are provided."
+  ]
+}

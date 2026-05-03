@@ -1,0 +1,30 @@
+{
+  "task_id": "ASCREVIEW-TOY-INTRO-0001",
+  "task_type": "proposal_section_review",
+  "writing_target": "toy Introduction section",
+  "degree_or_publication_context": "formative undergraduate biomedical writing exercise",
+  "topic": "yeast oxidative stress response",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [
+    "toy marking scheme",
+    "toy introduction section brief",
+    "draft introduction text placeholder"
+  ],
+  "missing_materials": [
+    "full proposal",
+    "figures",
+    "real domain source pack"
+  ],
+  "review_modes": [
+    "section_review"
+  ],
+  "output_format": "markdown_report",
+  "specialization_gate": {
+    "status": "toy_partial",
+    "can_review_draft": true,
+    "scope_limit": "formative introduction review only; no full-draft score or factual domain adjudication"
+  }
+}

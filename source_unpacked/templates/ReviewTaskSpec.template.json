@@ -1,0 +1,66 @@
+{
+  "task_id": "ASCREVIEW-SESSION-XXXX",
+  "task_type": "dissertation_review | thesis_chapter_review | article_review | proposal_review | revision_round_review",
+  "writing_target": "",
+  "degree_or_publication_context": "",
+  "topic": "",
+  "draft_stage": "formative_outline | early_draft | supervisor_review | pre_submission | journal_submission | revision_round | unknown",
+  "target_venue_or_assessment": "",
+  "priority_rules": {
+    "teacher_marking_scheme": "highest",
+    "domain_expertise": "secondary"
+  },
+  "available_materials": [],
+  "missing_materials": [
+    "teacher marking scheme",
+    "section requirements and weights",
+    "draft text",
+    "figures and legends, if relevant",
+    "source constraints and required citation boundaries",
+    "assessment context and output requirements",
+    "domain background sources, if factual review is requested"
+  ],
+  "review_modes": [
+    "section_review",
+    "full_draft_review",
+    "revision_round_review"
+  ],
+  "specialization_gate": {
+    "status": "not_started",
+    "can_review_draft": false,
+    "required_before_review": [
+      "SpecializationInputContract.json",
+      "ReviewTaskSpec.json",
+      "MarkingSchemeMap.json",
+      "SectionRubricMap.json",
+      "DomainBackgroundPack.md",
+      "SourceEvidenceIndex.json",
+      "SectionReviewContract.json"
+    ]
+  },
+  "specialization_input_contract": {
+    "path": "SpecializationInputContract.json",
+    "status": "not_started",
+    "required_input_keys": [
+      "draft",
+      "marking_scheme",
+      "figures_assets",
+      "source_constraints",
+      "assessment_context"
+    ]
+  },
+  "routing_decisions": [],
+  "severity_policy": {
+    "taxonomy_source": "SpecializationInputContract.json",
+    "allowed_severity_ids": [
+      "rubric_failure",
+      "scientific_validity_risk",
+      "reporting_completeness_risk",
+      "reproducibility_risk",
+      "policy_compliance_risk",
+      "draft_stage_todo",
+      "style_or_clarity_polish"
+    ]
+  },
+  "output_format": "markdown_to_word_report"
+}

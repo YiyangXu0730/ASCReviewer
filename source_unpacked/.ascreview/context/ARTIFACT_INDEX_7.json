@@ -1,0 +1,73 @@
+{
+  "snapshot_id": "7",
+  "created_at": "2026-05-03T07:02:50.9252865+08:00",
+  "mission": "Continue ASCReview build and prepare final folder delivery without reviewing the dissertation.",
+  "continuation_source": ".ascreview/context/CONTEXT_SNAPSHOT_7.md",
+  "run_plan": ".ascreview/runs/RUN_20260503_062733_plan.md",
+  "run_ledger": ".ascreview/runs/RUN_20260503_062733_ledger.md",
+  "heartbeat_automation": "ascreview-continue-until-final-report-folder",
+  "final_folder": "C:/Users/xyydsb666/Desktop/The Final ACS Review",
+  "counts": {
+    "sources": 65,
+    "provenance_rules": 58,
+    "distillation_rounds": 58,
+    "skills": 9
+  },
+  "files": [
+    {
+      "path": "scripts/validate_negative_cases.py",
+      "status": "created",
+      "summary": "Negative validator self-tests for core failure paths.",
+      "next_action": "Run before final delivery."
+    },
+    {
+      "path": "examples/toy_revision_partial_pack/*",
+      "status": "created",
+      "summary": "Revision-round partial-input fixture with blocked resolution and score movement.",
+      "next_action": "Use as regression coverage."
+    },
+    {
+      "path": "examples/toy_figure_permission_pack/*",
+      "status": "created",
+      "summary": "Figure permission gating fixture for absent and present assets.",
+      "next_action": "Use as regression coverage."
+    },
+    {
+      "path": "library/provenance_ledger.seed.json",
+      "status": "modified",
+      "summary": "Added REVISION-R4 and FIGURES-R7.",
+      "next_action": "Keep future rules source-linked and audited."
+    },
+    {
+      "path": "qc/distillation_round_ledger.seed.json",
+      "status": "modified",
+      "summary": "Expanded adversarial rounds to 58.",
+      "next_action": "Keep aligned with QC report."
+    },
+    {
+      "path": "qc/adversarial_qc_report.md",
+      "status": "modified",
+      "summary": "Updated revision and figure permission gate objections and decisions.",
+      "next_action": "Include in final report summary."
+    }
+  ],
+  "validation": {
+    "latest_known_status": "passing",
+    "commands": [
+      "python scripts\\validate_pack.py",
+      "python scripts\\validate_ascreview_build.py",
+      "python scripts\\validate_negative_cases.py"
+    ],
+    "outputs": [
+      "VALIDATION_OK",
+      "ASCREVIEW_VALIDATION_OK sources=65 provenance_rules=58 distillation_rounds=58 skills=9",
+      "NEGATIVE_VALIDATION_OK"
+    ]
+  },
+  "next_actions": [
+    "Prepare final-report scaffold and final package folder.",
+    "Create Desktop folder The Final ACS Review only when final report is ready.",
+    "Place final report and final ZIP/package in that folder.",
+    "Do not begin dissertation-specific specialization in build mode."
+  ]
+}

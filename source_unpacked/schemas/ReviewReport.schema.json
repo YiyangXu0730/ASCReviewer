@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ASCReview ReviewReport",
+  "type": "object",
+  "required": [
+    "report_id",
+    "target_section",
+    "rubric_score_estimate",
+    "must_fix",
+    "should_fix",
+    "optional_polish",
+    "evidence_links"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string"
+    },
+    "target_section": {
+      "type": "string"
+    },
+    "rubric_score_estimate": {
+      "type": [
+        "number",
+        "string",
+        "null"
+      ]
+    },
+    "score_rationale": {
+      "type": "string"
+    },
+    "must_fix": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "should_fix": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "optional_polish": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "paragraph_comments": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "sentence_level_comments": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_links": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "evidence_tags_used": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "source_pattern",
+          "official_guideline",
+          "teacher_rubric",
+          "rubric_gate",
+          "domain_expert_heuristic",
+          "provisional"
+        ]
+      }
+    },
+    "claim_calibration": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "data_method_traceability": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "figure_legend_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "policy_guideline_boundaries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "specialization_input_status": {
+      "type": "object",
+      "properties": {
+        "contract_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "missing_inputs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "review_permissions": {
+          "type": "object"
+        }
+      }
+    },
+    "routing_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "severity_classifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "finding_id": {
+            "type": "string"
+          },
+          "severity_id": {
+            "enum": [
+              "rubric_failure",
+              "scientific_validity_risk",
+              "reporting_completeness_risk",
+              "reproducibility_risk",
+              "policy_compliance_risk",
+              "draft_stage_todo",
+              "style_or_clarity_polish"
+            ]
+          },
+          "rationale": {
+            "type": "string"
+          },
+          "evidence_tag": {
+            "enum": [
+              "source_pattern",
+              "official_guideline",
+              "teacher_rubric",
+              "rubric_gate",
+              "domain_expert_heuristic",
+              "provisional"
+            ]
+          }
+        }
+      }
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "issue": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "needed_to_resolve": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "draft_stage_caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
