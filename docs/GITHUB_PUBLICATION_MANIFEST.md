@@ -76,4 +76,4 @@ origin	https://github.com/YiyangXu0730/ASCReviewer.git (fetch)
 origin	https://github.com/YiyangXu0730/ASCReviewer.git (push)
 ```
 
-- Final commit hash: PENDING_SECOND_COMMIT
+- Final repository HEAD after manifest cleanup is reported in the publication response. A commit cannot contain its own final hash without changing that hash.
