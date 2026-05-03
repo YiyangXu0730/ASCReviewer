@@ -60,6 +60,20 @@
 
 ## Publication Result
 
-- Commit hash: PENDING_PUSH
+- Initial publication commit hash: 0b2bc4e1f16fdddbc46f7486ba9cc1878da133f7
 - Remote URL: https://github.com/YiyangXu0730/ASCReviewer.git
 - Branch: main
+
+
+## Final Push Record
+
+- Manifest update prepared after initial push.
+- Initial commit hash: 0b2bc4e1f16fdddbc46f7486ba9cc1878da133f7
+- Remote configuration:
+
+```text
+origin	https://github.com/YiyangXu0730/ASCReviewer.git (fetch)
+origin	https://github.com/YiyangXu0730/ASCReviewer.git (push)
+```
+
+- Final commit hash: PENDING_SECOND_COMMIT
